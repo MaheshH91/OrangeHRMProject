@@ -7,4 +7,10 @@
       <class name="com.orangehrm.test.DummyTest2"/>
     </classes>
   </test> <!-- Test -->
+  <test thread-count="5" name="OrangeHRMTest1">
+    <classes>
+      <class name="com.orangehrm.test.DummyTest"/>
+      <class name="com.orangehrm.test.DummyTest2"/>
+    </classes>
+  </test> <!-- Test -->
 </suite> <!-- Suite -->

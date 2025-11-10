@@ -17,7 +17,7 @@ import org.testng.annotations.BeforeSuite;
 public class BaseClass {
 
 	protected static Properties prop;
-	protected WebDriver driver;
+	protected static WebDriver driver;
 
 	@BeforeSuite
 	public void loadConfig() throws IOException {
@@ -30,8 +30,8 @@ public class BaseClass {
 
 	@BeforeMethod
 	public void setUp() throws IOException {
-		// Load config properties file
 
+		System.out.println("Setting up the browser for : " +this.getClass().getSimpleName());
 		// Initialize WebDriver based on the browser specified in config properties
 		String browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("chrome")) {
