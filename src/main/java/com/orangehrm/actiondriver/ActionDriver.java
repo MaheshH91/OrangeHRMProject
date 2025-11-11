@@ -18,13 +18,26 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.orangehrm.utilities.configReader;
+
 public class ActionDriver {
 	private WebDriver driver;
 	private WebDriverWait wait;
 
 	public ActionDriver(WebDriver driver) {
 		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		// set implicit wait from config
+		try {
+			int implicit = configReader.getImplicitWait();
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicit));
+		} catch (Exception e) {
+			// fallback handled inside configReader; ignore here
+			System.out.println("Using default implicit wait due to config error: " + e.getMessage());
+		}
+
+		// initialize explicit wait using configured value
+		int explicit = configReader.getExplicitWait();
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(explicit));
 
 	}
 
@@ -91,6 +104,7 @@ public class ActionDriver {
 	public void waitForElementToBeVisible(By by) {
 		wait.until(driver -> driver.findElement(by).isDisplayed());
 	}
+
 	// Method to check if an element is displayed
 	public boolean isDisplayed(By by) {
 		try {
@@ -125,6 +139,16 @@ public class ActionDriver {
 		}
 	}
 
+	// Scroll to an element
+	public void scrollToElement(By by) {
+		try {
+			waitForElementToBeVisible(by);
+			WebElement el = driver.findElement(by);
+			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", el);
+		} catch (Exception e) {
+			System.out.println("Unable to scroll to element: " + e.getMessage());
+		}
+	}
 	// Select dropdown by visible text
 	public void selectByVisibleText(By by, String visibleText) {
 		try {
