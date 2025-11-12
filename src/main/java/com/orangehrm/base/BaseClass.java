@@ -32,8 +32,8 @@ import com.sun.org.slf4j.internal.Logger;
 public class BaseClass {
 
 	protected static Properties prop;
-	// protected static WebDriver driver;
-	// private static ActionDriver actionDriver;
+	 protected static WebDriver driver;
+	 private static ActionDriver actionDriver;
 
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	private static ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
