@@ -22,13 +22,11 @@ public class ActionDriver {
 
 	private WebDriver driver;
 	private WebDriverWait wait;
-//	public static final Logger logger = BaseClass.logger;
 
 	public ActionDriver(WebDriver driver) {
 		this.driver = driver;
 		int explicitWait = Integer.parseInt(BaseClass.getProp().getProperty("explicitWait"));
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWait));
-		logger.info("WebDriver instance is created.");
 	}
 
 	// Method to click an element
@@ -38,13 +36,9 @@ public class ActionDriver {
 			applyBorder(by,"green");
 			waitForElementToBeClickable(by);
 			driver.findElement(by).click();
-			ExtentManager.logStep("clicked an element: "+elementDescription);
-			logger.info("clicked an element-->" + elementDescription);
 		} catch (Exception e) {
 			applyBorder(by,"red");
 			System.out.println("Unable to click element:" + e.getMessage());
-			ExtentManager.logFailure(BaseClass.getDriver(), "Unable to click element:", elementDescription+"_unable to click");
-			logger.error("unable to click element");
 		}
 	}
 
@@ -59,10 +53,8 @@ public class ActionDriver {
 			WebElement element = driver.findElement(by);
 			element.clear();
 			element.sendKeys(value);
-			logger.info("Entered text on " + getElementDescription(by) + "-->" + value);
 		} catch (Exception e) {
 			applyBorder(by,"red");
-			logger.error("Unable to enter the value:" + e.getMessage());
 		}
 	}
 
@@ -74,7 +66,6 @@ public class ActionDriver {
 			return driver.findElement(by).getText();
 		} catch (Exception e) {
 			applyBorder(by,"red");
-			logger.error("Unable to get the text:" + e.getMessage());
 			return "";
 		}
 	}
@@ -86,18 +77,13 @@ public class ActionDriver {
 			String actualText = driver.findElement(by).getText();
 			if (expectedText.equals(actualText)) {
 				applyBorder(by,"green");
-				logger.info("Texts are Matching:" + actualText + " equals " + expectedText);
-				ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Compare Text", "Text Verified Successfully! "+actualText+ " equals "+expectedText);
 				return true;
 			} else {
 				applyBorder(by,"red");
-				logger.error("Texts are not Matching:" + actualText + " not equals " + expectedText);
-				ExtentManager.logFailure(BaseClass.getDriver(), "Text Comparison Failed!", "Text Comparison Failed! "+actualText+ " not equals "+expectedText);
 				return false;
 			}
 		} catch (Exception e) {
 			applyBorder(by,"red");
-			logger.error("Unable to compare Texts:" + e.getMessage());
 		}
 		return false;
 	}
@@ -117,14 +103,9 @@ public class ActionDriver {
 		try {
 			waitForElementToBeVisible(by);
 			applyBorder(by,"green");
-			logger.info("Element is displayed " + getElementDescription(by));
-			ExtentManager.logStep("Element is displayed: "+getElementDescription(by));
-			ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element is displayed: ", "Element is displayed: "+getElementDescription(by));
 			return driver.findElement(by).isDisplayed();
 		} catch (Exception e) {
 			applyBorder(by,"red");
-			logger.error("Element is not displayed: " + e.getMessage());
-			ExtentManager.logFailure(BaseClass.getDriver(),"Element is not displayed: ","Elemenet is not displayed: "+getElementDescription(by));
 			return false;
 		}
 	}
@@ -134,9 +115,7 @@ public class ActionDriver {
 		try {
 			wait.withTimeout(Duration.ofSeconds(timeOutInSec)).until(WebDriver -> ((JavascriptExecutor) WebDriver)
 					.executeScript("return document.readyState").equals("complete"));
-			logger.info("Page loaded successfully.");
 		} catch (Exception e) {
-			logger.error("Page did not load within " + timeOutInSec + " seconds. Exception: " + e.getMessage());
 		}
 	}
 
@@ -149,7 +128,6 @@ public class ActionDriver {
 			js.executeScript("arguments[0].scrollIntoView(true);", element);
 		} catch (Exception e) {
 			applyBorder(by,"red");
-			logger.error("Unable to locate element:" + e.getMessage());
 		}
 	}
 
@@ -158,7 +136,6 @@ public class ActionDriver {
 		try {
 			wait.until(ExpectedConditions.elementToBeClickable(by));
 		} catch (Exception e) {
-			logger.error("element is not clickable: " + e.getMessage());
 		}
 	}
 
@@ -167,7 +144,6 @@ public class ActionDriver {
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 		} catch (Exception e) {
-			logger.error("Element is not visible:" + e.getMessage());
 		}
 	}
 
@@ -235,9 +211,7 @@ public class ActionDriver {
 			String script = "arguments[0].style.border='3px solid "+color+"'";
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript(script, element);
-			logger.info("Applied the border with color "+color+ " to element: "+getElementDescription(by));
 		} catch (Exception e) {
-			logger.warn("Failed to apply the border to an element: "+getElementDescription(by),e);
 		}
 	}
 	
@@ -249,10 +223,8 @@ public class ActionDriver {
             WebElement element = driver.findElement(by);
             new Select(element).selectByVisibleText(value);
             applyBorder(by, "green");
-            logger.info("Selected dropdown value: " + value);
         } catch (Exception e) {
             applyBorder(by, "red");
-            logger.error("Unable to select dropdown value: " + value, e);
         }
     }
     
@@ -262,10 +234,8 @@ public class ActionDriver {
             WebElement element = driver.findElement(by);
             new Select(element).selectByValue(value);
             applyBorder(by, "green");
-            logger.info("Selected dropdown value by actual value: " + value);
         } catch (Exception e) {
             applyBorder(by, "red");
-            logger.error("Unable to select dropdown by value: " + value, e);
         }
     }
     
@@ -275,10 +245,8 @@ public class ActionDriver {
             WebElement element = driver.findElement(by);
             new Select(element).selectByIndex(index);
             applyBorder(by, "green");
-            logger.info("Selected dropdown value by index: " + index);
         } catch (Exception e) {
             applyBorder(by, "red");
-            logger.error("Unable to select dropdown by index: " + index, e);
         }
     }
     
@@ -292,10 +260,8 @@ public class ActionDriver {
                 optionsList.add(option.getText());
             }
             applyBorder(by, "green");
-            logger.info("Retrieved dropdown options for " + getElementDescription(by));
         } catch (Exception e) {
             applyBorder(by, "red");
-            logger.error("Unable to get dropdown options: " + e.getMessage());
         }
         return optionsList;
     }
@@ -309,17 +275,14 @@ public class ActionDriver {
             WebElement element = driver.findElement(by);
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
             applyBorder(by, "green");
-            logger.info("Clicked element using JavaScript: " + getElementDescription(by));
         } catch (Exception e) {
             applyBorder(by, "red");
-            logger.error("Unable to click using JavaScript", e);
         }
     }
     
     // Method to scroll to the bottom of the page
     public void scrollToBottom() {
         ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
-        logger.info("Scrolled to the bottom of the page.");
     }
     
     // Method to highlight an element using JavaScript
@@ -327,9 +290,7 @@ public class ActionDriver {
         try {
             WebElement element = driver.findElement(by);
             ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid yellow'", element);
-            logger.info("Highlighted element using JavaScript: " + getElementDescription(by));
         } catch (Exception e) {
-            logger.error("Unable to highlight element using JavaScript", e);
         }
     }
     
@@ -342,13 +303,10 @@ public class ActionDriver {
             for (String window : windows) {
                 driver.switchTo().window(window);
                 if (driver.getTitle().equals(windowTitle)) {
-                    logger.info("Switched to window: " + windowTitle);
                     return;
                 }
             }
-            logger.warn("Window with title " + windowTitle + " not found.");
         } catch (Exception e) {
-            logger.error("Unable to switch window", e);
         }
     }
     
@@ -356,16 +314,13 @@ public class ActionDriver {
     public void switchToFrame(By by) {
         try {
             driver.switchTo().frame(driver.findElement(by));
-            logger.info("Switched to iframe: " + getElementDescription(by));
         } catch (Exception e) {
-            logger.error("Unable to switch to iframe", e);
         }
     }
     
     // Method to switch back to the default content
     public void switchToDefaultContent() {
         driver.switchTo().defaultContent();
-        logger.info("Switched back to default content.");
     }
     
     // ===================== Alert Handling =====================
@@ -374,9 +329,7 @@ public class ActionDriver {
     public void acceptAlert() {
         try {
             driver.switchTo().alert().accept();
-            logger.info("Alert accepted.");
         } catch (Exception e) {
-            logger.error("No alert found to accept", e);
         }
     }
     
@@ -384,9 +337,7 @@ public class ActionDriver {
     public void dismissAlert() {
         try {
             driver.switchTo().alert().dismiss();
-            logger.info("Alert dismissed.");
         } catch (Exception e) {
-            logger.error("No alert found to dismiss", e);
         }
     }
     
@@ -395,7 +346,6 @@ public class ActionDriver {
         try {
             return driver.switchTo().alert().getText();
         } catch (Exception e) {
-            logger.error("No alert text found", e);
             return "";
         }
     }
@@ -405,23 +355,15 @@ public class ActionDriver {
     public void refreshPage() {
         try {
             driver.navigate().refresh();
-            ExtentManager.logStep("Page refreshed successfully.");
-            logger.info("Page refreshed successfully.");
         } catch (Exception e) {
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to refresh page", "refresh_page_failed");
-            logger.error("Unable to refresh page: " + e.getMessage());
         }
     }
 
     public String getCurrentURL() {
         try {
             String url = driver.getCurrentUrl();
-            ExtentManager.logStep("Current URL fetched: " + url);
-            logger.info("Current URL fetched: " + url);
             return url;
         } catch (Exception e) {
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to fetch current URL", "get_current_url_failed");
-            logger.error("Unable to fetch current URL: " + e.getMessage());
             return null;
         }
     }
@@ -429,11 +371,7 @@ public class ActionDriver {
     public void maximizeWindow() {
         try {
             driver.manage().window().maximize();
-            ExtentManager.logStep("Browser window maximized.");
-            logger.info("Browser window maximized.");
         } catch (Exception e) {
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to maximize window", "maximize_window_failed");
-            logger.error("Unable to maximize window: " + e.getMessage());
         }
     }
     
@@ -444,11 +382,7 @@ public class ActionDriver {
         try {
             Actions actions = new Actions(driver);
             actions.moveToElement(driver.findElement(by)).perform();
-            ExtentManager.logStep("Moved to element: " + elementDescription);
-            logger.info("Moved to element --> " + elementDescription);
         } catch (Exception e) {
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to move to element", elementDescription + "_move_failed");
-            logger.error("Unable to move to element: " + e.getMessage());
         }
     }
 
@@ -458,11 +392,7 @@ public class ActionDriver {
         try {
             Actions actions = new Actions(driver);
             actions.dragAndDrop(driver.findElement(source), driver.findElement(target)).perform();
-            ExtentManager.logStep("Dragged element: " + sourceDescription + " and dropped on " + targetDescription);
-            logger.info("Dragged element: " + sourceDescription + " and dropped on " + targetDescription);
         } catch (Exception e) {
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to drag and drop", sourceDescription + "_drag_failed");
-            logger.error("Unable to drag and drop: " + e.getMessage());
         }
     }
 
@@ -471,11 +401,7 @@ public class ActionDriver {
         try {
             Actions actions = new Actions(driver);
             actions.doubleClick(driver.findElement(by)).perform();
-            ExtentManager.logStep("Double-clicked on element: " + elementDescription);
-            logger.info("Double-clicked on element --> " + elementDescription);
         } catch (Exception e) {
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to double-click element", elementDescription + "_doubleclick_failed");
-            logger.error("Unable to double-click element: " + e.getMessage());
         }
     }
 
@@ -484,11 +410,7 @@ public class ActionDriver {
         try {
             Actions actions = new Actions(driver);
             actions.contextClick(driver.findElement(by)).perform();
-            ExtentManager.logStep("Right-clicked on element: " + elementDescription);
-            logger.info("Right-clicked on element --> " + elementDescription);
         } catch (Exception e) {
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to right-click element", elementDescription + "_rightclick_failed");
-            logger.error("Unable to right-click element: " + e.getMessage());
         }
     }
 
@@ -497,11 +419,7 @@ public class ActionDriver {
         try {
             Actions actions = new Actions(driver);
             actions.sendKeys(driver.findElement(by), value).perform();
-            ExtentManager.logStep("Sent keys to element: " + elementDescription + " | Value: " + value);
-            logger.info("Sent keys to element --> " + elementDescription + " | Value: " + value);
         } catch (Exception e) {
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to send keys", elementDescription + "_sendkeys_failed");
-            logger.error("Unable to send keys to element: " + e.getMessage());
         }
     }
 
@@ -509,11 +427,7 @@ public class ActionDriver {
         String elementDescription = getElementDescription(by);
         try {
             driver.findElement(by).clear();
-            ExtentManager.logStep("Cleared text in element: " + elementDescription);
-            logger.info("Cleared text in element --> " + elementDescription);
         } catch (Exception e) {
-            ExtentManager.logFailure(BaseClass.getDriver(), "Unable to clear text", elementDescription + "_clear_failed");
-            logger.error("Unable to clear text in element: " + e.getMessage());
         }
     }   
     
@@ -522,10 +436,8 @@ public class ActionDriver {
         try {
             driver.findElement(by).sendKeys(filePath);
             applyBorder(by, "green");
-            logger.info("Uploaded file: " + filePath);
         } catch (Exception e) {
             applyBorder(by, "red");
-            logger.error("Unable to upload file: " + e.getMessage());
         }
     }  
     
