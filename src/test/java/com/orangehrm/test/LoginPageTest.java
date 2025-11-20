@@ -2,6 +2,7 @@ package com.orangehrm.test;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import com.orangehrm.base.BaseClass;
 import com.orangehrm.pages.HomePage;
@@ -17,7 +18,7 @@ public class LoginPageTest extends BaseClass {
 		loginPage=new LoginPage(getDriver());
 		homePage=new HomePage(getDriver());
 	}
-	
+	@Test
 	public void verifyValidLoginTest() {
 		loginPage.login(prop.getProperty("validUsername"), prop.getProperty("validPassword"));
 		Assert.assertTrue(homePage.isAdminTabVisible(), "Admin tab should be visible after successfull login.");
