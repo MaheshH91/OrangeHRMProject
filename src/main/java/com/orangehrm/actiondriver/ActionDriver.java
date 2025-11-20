@@ -116,6 +116,7 @@ public class ActionDriver {
 			wait.withTimeout(Duration.ofSeconds(timeOutInSec)).until(WebDriver -> ((JavascriptExecutor) WebDriver)
 					.executeScript("return document.readyState").equals("complete"));
 		} catch (Exception e) {
+			System.out.println("Page did not load within " + timeOutInSec + " seconds: " + e.getMessage());
 		}
 	}
 
@@ -128,14 +129,18 @@ public class ActionDriver {
 			js.executeScript("arguments[0].scrollIntoView(true);", element);
 		} catch (Exception e) {
 			applyBorder(by,"red");
+			System.out.println("Unable to scroll to element: " + e.getMessage());
 		}
 	}
+	
+	
 
 	// Wait for Element to be clickable
 	private void waitForElementToBeClickable(By by) {
 		try {
 			wait.until(ExpectedConditions.elementToBeClickable(by));
 		} catch (Exception e) {
+			System.out.println("Element not clickable: " + e.getMessage());
 		}
 	}
 
@@ -144,6 +149,7 @@ public class ActionDriver {
 		try {
 			wait.until(ExpectedConditions.visibilityOfElementLocated(by));
 		} catch (Exception e) {
+			System.out.println("Element not visible: " + e.getMessage());
 		}
 	}
 

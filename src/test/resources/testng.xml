@@ -3,14 +3,9 @@
 <suite name="OrangeHRMSuite">
   <test thread-count="5" name="OrangeHRMTest">
     <classes>
-      <class name="com.orangehrm.test.DummyTest"/>
-      <class name="com.orangehrm.test.DummyTest2"/>
+      <class name="com.orangehrm.test.DummyClass"/>
+      <class name="com.orangehrm.test.DummyClass2"/>
     </classes>
   </test> <!-- Test -->
-  <test thread-count="5" name="OrangeHRMTest1">
-    <classes>
-      <class name="com.orangehrm.test.DummyTest"/>
-      <class name="com.orangehrm.test.DummyTest2"/>
-    </classes>
-  </test> <!-- Test -->
+
 </suite> <!-- Suite -->

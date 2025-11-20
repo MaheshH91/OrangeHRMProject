@@ -3,14 +3,26 @@
 <suite name="Failed suite [OrangeHRMSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="OrangeHRMTest(failed)">
     <classes>
-      <class name="com.orangehrm.test.DummyTest">
+      <class name="com.orangehrm.test.DummyClass2">
         <methods>
-          <include name="setUp"/>
-          <include name="test"/>
+          <include name="setup"/>
           <include name="tearDown"/>
           <include name="loadConfig"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.orangehrm.test.DummyTest -->
+      </class> <!-- com.orangehrm.test.DummyClass2 -->
     </classes>
   </test> <!-- OrangeHRMTest(failed) -->
+  <test thread-count="5" name="OrangeHRMTest1(failed)">
+    <classes>
+      <class name="com.orangehrm.test.DummyClass2">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="loadConfig"/>
+          <include name="test"/>
+        </methods>
+      </class> <!-- com.orangehrm.test.DummyClass2 -->
+    </classes>
+  </test> <!-- OrangeHRMTest1(failed) -->
 </suite> <!-- Failed suite [OrangeHRMSuite] -->
