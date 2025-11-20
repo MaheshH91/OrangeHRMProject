@@ -15,13 +15,16 @@ public class HomePage {
 	private By logoutButton = By.xpath("//a[text()='Logout']");
 	private By orangeHrmLogo = By.xpath("//div[@class='oxd-brand-banner']/img");
 	
-	/*
-	 * // Initialize ActionDriver in the constructor public HomePage(ActionDriver
-	 * actionDriver) { this.actionDriver = actionDriver; }
-	 */
-	public HomePage(WebDriver driver) {
-		this.actionDriver = BaseClass.getActionDriver();
+	
+	 // Initialize ActionDriver in the constructor 
+	public HomePage(WebDriver driver) 
+	{
+		this.actionDriver = new ActionDriver(driver) ;
 	}
+//	
+//	public HomePage(WebDriver driver) {
+//		this.actionDriver = BaseClass.getActionDriver();
+//	}
 	// Method to verify if Admin tab is visible
 	public boolean isAdminTabVisible() {
 		return actionDriver.isDisplayed(adminTab);
@@ -31,7 +34,7 @@ public class HomePage {
 	public boolean isOrangeHrmLogoVisible() {
 		return actionDriver.isDisplayed(orangeHrmLogo);
 	}
-	//method to perform logout
+	//method to perform logout operation
 	public void logout() {
 		actionDriver.click(UserIdButton);
 		actionDriver.click(logoutButton);
