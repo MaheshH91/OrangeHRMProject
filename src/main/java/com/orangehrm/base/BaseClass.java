@@ -15,11 +15,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import com.orangehrm.actiondriver.ActionDriver;
+
 public class BaseClass {
 
 	protected static Properties prop;
 	protected static WebDriver driver;
-
+    private static ActionDriver actionDriver;
 
 	@BeforeSuite
 	public void loadConfig() throws IOException {
@@ -101,10 +103,18 @@ public class BaseClass {
 		}
 	}
 
-//	Getter method for driver
-	public WebDriver getDriver() {
+//// Getter Method for WebDriver
+	public static WebDriver getDriver() {
 		return driver;
 	}
+	// Getter Method for ActionDriver
+  	public static ActionDriver getActionDriver() {
+		if (actionDriver == null) {
+			actionDriver = new ActionDriver(driver);
+		}
+		return actionDriver;
+	}
+
 	// Driver setter method
 		public void setDriver(WebDriver driver) {
 			this.driver = driver;

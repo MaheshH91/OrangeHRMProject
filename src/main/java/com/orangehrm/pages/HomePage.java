@@ -1,8 +1,10 @@
 package com.orangehrm.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import com.orangehrm.actiondriver.ActionDriver;
+import com.orangehrm.base.BaseClass;
 
 public class HomePage {
 	private ActionDriver actionDriver;
@@ -13,11 +15,13 @@ public class HomePage {
 	private By logoutButton = By.xpath("//a[text()='Logout']");
 	private By orangeHrmLogo = By.xpath("//div[@class='oxd-brand-banner']/img");
 	
-	// Initialize ActionDriver in the constructor
-	public HomePage(ActionDriver actionDriver) {
-		this.actionDriver = actionDriver;
+	/*
+	 * // Initialize ActionDriver in the constructor public HomePage(ActionDriver
+	 * actionDriver) { this.actionDriver = actionDriver; }
+	 */
+	public HomePage(WebDriver driver) {
+		this.actionDriver = BaseClass.getActionDriver();
 	}
-	
 	// Method to verify if Admin tab is visible
 	public boolean isAdminTabVisible() {
 		return actionDriver.isDisplayed(adminTab);
