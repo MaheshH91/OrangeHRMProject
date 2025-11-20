@@ -20,7 +20,7 @@ public class LoginPageTest extends BaseClass {
 	}
 	@Test
 	public void verifyValidLoginTest() {
-		loginPage.login(prop.getProperty("validUsername"), prop.getProperty("validPassword"));
+		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		Assert.assertTrue(homePage.isAdminTabVisible(), "Admin tab should be visible after successfull login.");
 		
 		homePage.logout();

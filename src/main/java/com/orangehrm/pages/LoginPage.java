@@ -10,8 +10,8 @@ public class LoginPage {
 	private ActionDriver actionDriver;
 	//define locators and methods for LoginPage
 	
-	private By usernameField = By.name("username");
-	private By passwordField = By.cssSelector("inout[type='password']");
+	private By usernameField = By.xpath("//input[@name='username']");
+	private By passwordField = By.cssSelector("input[type='password']");
 	private By loginButton = By.xpath("//button[@type='submit']");
 	private By errorMessage = By.xpath("//p[text()='Invalid credentials']");
 	

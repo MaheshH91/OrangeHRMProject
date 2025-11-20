@@ -11,7 +11,7 @@ public class HomePage {
 	// Define locators and methods for HomePage
 	
 	private By adminTab = By.xpath("//span[text()='Admin']");
-	private By UserIdButton = By.cssSelector("oxd-userdropdown-name");
+	private By UserIdButton = By.cssSelector(".oxd-userdropdown-name");
 	private By logoutButton = By.xpath("//a[text()='Logout']");
 	private By orangeHrmLogo = By.xpath("//div[@class='oxd-brand-banner']/img");
 	
