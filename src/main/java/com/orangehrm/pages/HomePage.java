@@ -19,7 +19,8 @@ public class HomePage {
 	 // Initialize ActionDriver in the constructor 
 	public HomePage(WebDriver driver) 
 	{
-		this.actionDriver = new ActionDriver(driver) ;
+//		this.actionDriver = new ActionDriver(driver) ;
+		actionDriver = BaseClass.getActionDriver();
 	}
 //	
 //	public HomePage(WebDriver driver) {
@@ -35,8 +36,9 @@ public class HomePage {
 		return actionDriver.isDisplayed(orangeHrmLogo);
 	}
 	//method to perform logout operation
-	public void logout() {
+	public void logout() throws InterruptedException {
 		actionDriver.click(UserIdButton);
+		Thread.sleep(1000);
 		actionDriver.click(logoutButton);
 	}
 	// Method to click on Admin tab

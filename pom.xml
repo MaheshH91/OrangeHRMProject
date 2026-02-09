@@ -15,7 +15,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-		<selenium.java.version>4.38.0</selenium.java.version>
+		<selenium.java.version>4.40.0</selenium.java.version>
 		<testng.version>7.11.0</testng.version>
 
 	</properties>

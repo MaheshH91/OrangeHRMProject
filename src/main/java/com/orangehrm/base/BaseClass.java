@@ -21,7 +21,7 @@ public class BaseClass {
 
 	protected static Properties prop;
 	protected static WebDriver driver;
-    private static ActionDriver actionDriver;
+	private static ActionDriver actionDriver;
 
 	@BeforeSuite
 	public void loadConfig() throws IOException {
@@ -30,6 +30,8 @@ public class BaseClass {
 		FileInputStream fis = new FileInputStream(
 				System.getProperty("user.dir") + "/src/main/resources/config.properties");
 		prop.load(fis);
+
+		//
 
 		// Start the Extent Report
 		// ExtentManager.getReporter(); --This has been implemented in TestListener
@@ -82,6 +84,12 @@ public class BaseClass {
 		launchBrowser();
 		configureBrowser();
 
+		// Initialize ActionDriver only once
+		if (actionDriver == null) {
+			actionDriver = new ActionDriver(driver);
+			System.out.println("Action driver instance is created..");
+		}
+
 	}
 
 	/*
@@ -101,30 +109,54 @@ public class BaseClass {
 				System.out.println("Unable to close the browser: " + e.getMessage());
 			}
 		}
+		System.out.println("Webdriver instance is closed..");
+		driver = null; // Set driver to null after quitting
+		actionDriver = null; // Set actionDriver to null after quitting
+
 	}
 
 //// Getter Method for WebDriver
+/*
 	public static WebDriver getDriver() {
 		return driver;
-	}
-	// Getter Method for ActionDriver
-  	public static ActionDriver getActionDriver() {
-		if (actionDriver == null) {
-			actionDriver = new ActionDriver(driver);
-		}
-		return actionDriver;
-	}
+	}*/
+	// Getter method for
+	// prop
 
-	// Driver setter method
-		public void setDriver(WebDriver driver) {
-			this.driver = driver;
-		}
-	// Getter method for prop
 	public static Properties getProp() {
 		return prop;
 	}
+	public static WebDriver getDriver() {
+		if(driver == null) {
+			System.out.println("WebDriver instance is null or not initialized...");
+			throw new IllegalStateException("WebDriver instance is not initialized.");
+			
+		}
+		
+		return driver;
+	}
+	public static ActionDriver getActionDriver() {
+	if (actionDriver == null) {
+		System.out.println("ActionDriver instance is null or not initialized...");
+		throw new IllegalStateException("ActionDriver instance is not initialized.");
+		
+	}
+	return actionDriver;
+}
 
 	
+	// Getter Method for ActionDriver
+//	public static ActionDriver getActionDriver() {
+//		if (actionDriver == null) {
+//			actionDriver = new ActionDriver(driver);
+//		}
+//		return actionDriver;
+//	}
+
+	// Driver setter method
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
+	}
 
 	// Static wait for pause
 	public void staticWait(int seconds) {

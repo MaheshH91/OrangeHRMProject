@@ -19,7 +19,7 @@ public class LoginPageTest extends BaseClass {
 		homePage=new HomePage(getDriver());
 	}
 	@Test
-	public void verifyValidLoginTest() {
+	public void verifyValidLoginTest() throws InterruptedException {
 		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
 		Assert.assertTrue(homePage.isAdminTabVisible(), "Admin tab should be visible after successfull login.");
 		
@@ -33,6 +33,13 @@ public class LoginPageTest extends BaseClass {
 //		} else {
 //			System.out.println("Valid Login Test Failed: Admin tab is not visible.");
 //		}
+	}
+	@Test
+	public void invalidLoginTest() {
+		loginPage.login("admin","admin");
+		String expectedErrorMessage = "Invalid credentials";
+		Assert.assertTrue(loginPage.verifyErrorMessage(expectedErrorMessage),"Test Failed: Invalid error message.");
+		
 	}
 	
 	
