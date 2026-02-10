@@ -35,34 +35,39 @@ public class ActionDriver {
 
 	// Example of an optimized Click method
 	public void click(By by) {
-	    String description = getElementDescription(by); // Get info once
-	    try {
-	        waitForElementToBeClickable(by);
-	        applyBorder(by, "green");
-	        driver.findElement(by).click();
-	        logger.info("Clicked on: " + description);
-	    } catch (Exception e) {
-	        // Safe border application
-	        try { applyBorder(by, "red"); } catch (Exception ignored) {} 
-	        logger.error("FAILED to click on " + description + ". Error: " + e.getMessage());
-	    }
+		String elementDescription = getElementDescription(by); // Get info once
+		try {
+			waitForElementToBeClickable(by);
+			applyBorder(by, "green");
+			driver.findElement(by).click();
+			logger.info("Clicked on an element: " + elementDescription);
+		} catch (Exception e) {
+			// Safe border application
+			try {
+				applyBorder(by, "red");
+			} catch (Exception ignored) {
+			}
+			logger.error("FAILED to click on " + elementDescription + ". Error: " + e.getMessage());
+		}
 	}
 
 	// Optimization for enterText to avoid duplication
 	public void enterText(By by, String value) {
-	    String description = getElementDescription(by);
-	    try {
-	        waitForElementToBeVisible(by);
-	        WebElement element = driver.findElement(by);
-	        applyBorder(by, "green");
-	        element.clear();
-	        element.sendKeys(value);
-	        logger.info("Entered ['" + value + "'] into: " + description);
-	    } catch (Exception e) {
-	        try { applyBorder(by, "red"); } catch (Exception ignored) {}
-	        logger.error("FAILED to enter text into " + description + ". Error: " + e.getMessage());
-	    }
+		String description = getElementDescription(by);
+		try {
+			waitForElementToBeVisible(by);
+			WebElement element = driver.findElement(by);
+			applyBorder(by, "green");
+			element.clear();
+			element.sendKeys(value);
+		  	logger.info("Entered text on['" + getElementDescription(by) + "'] value ['" + value + "']");
+		} catch (Exception e) {
+
+			applyBorder(by, "red");
+			logger.error("FAILED to enter text into " + description + ". Error: " + e.getMessage());
+		}
 	}
+
 	// Method to get text from an input field
 	public String getText(By by) {
 		try {
@@ -112,7 +117,9 @@ public class ActionDriver {
 		try {
 			waitForElementToBeVisible(by);
 			applyBorder(by, "green");
+			logger.info("Element is displayed: " + getElementDescription(by));
 			return driver.findElement(by).isDisplayed();
+			
 		} catch (Exception e) {
 			applyBorder(by, "red");
 			logger.error("Element is not displayed: " + e.getMessage());
@@ -165,12 +172,10 @@ public class ActionDriver {
 	// Method to get the description of an element using By locator
 	public String getElementDescription(By locator) {
 		// Check for null driver or locator to avoid NullPointerException
-		if (driver == null) {
-			return "Driver is not initialized.";
-		}
-		if (locator == null) {
+		if (driver == null)
+			return "Driver is null.";
+		if (locator == null)
 			return "Locator is null.";
-		}
 
 		try {
 			// Find the element using the locator
@@ -199,10 +204,9 @@ public class ActionDriver {
 			}
 		} catch (Exception e) {
 			// Log exception for debugging
-			logger.error("Error describing element: " + e.getMessage());
-//			e.printStackTrace(); // Replace with a logger in a real-world scenario
-			return "Unable to describe element due to error: " + e.getMessage();
+			logger.error("Unable to describe element due to error: " + e.getMessage());
 		}
+		return "Element located using: " + locator.toString();
 	}
 
 	// Utility method to check if a string is not null or empty
@@ -234,26 +238,6 @@ public class ActionDriver {
 	// ===================== Select Methods =====================
 
 	// Method to select a dropdown by visible text
-	public void selectByVisibleText(By by, String value) {
-		try {
-			WebElement element = driver.findElement(by);
-			new Select(element).selectByVisibleText(value);
-			applyBorder(by, "green");
-		} catch (Exception e) {
-			applyBorder(by, "red");
-		}
-	}
-
-	// Method to select a dropdown by value
-	public void selectByValue(By by, String value) {
-		try {
-			WebElement element = driver.findElement(by);
-			new Select(element).selectByValue(value);
-			applyBorder(by, "green");
-		} catch (Exception e) {
-			applyBorder(by, "red");
-		}
-	}
 
 	// Method to select a dropdown by index
 	public void selectByIndex(By by, int index) {
@@ -284,21 +268,6 @@ public class ActionDriver {
 
 	// ===================== JavaScript Utility Methods =====================
 
-	// Method to click using JavaScript
-	public void clickUsingJS(By by) {
-		try {
-			WebElement element = driver.findElement(by);
-			((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
-			applyBorder(by, "green");
-		} catch (Exception e) {
-			applyBorder(by, "red");
-		}
-	}
-
-	// Method to scroll to the bottom of the page
-	public void scrollToBottom() {
-		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
-	}
 
 	// Method to highlight an element using JavaScript
 	public void highlightElementJS(By by) {
@@ -311,27 +280,6 @@ public class ActionDriver {
 
 	// ===================== Window and Frame Handling =====================
 
-	// Method to switch between browser windows
-	public void switchToWindow(String windowTitle) {
-		try {
-			Set<String> windows = driver.getWindowHandles();
-			for (String window : windows) {
-				driver.switchTo().window(window);
-				if (driver.getTitle().equals(windowTitle)) {
-					return;
-				}
-			}
-		} catch (Exception e) {
-		}
-	}
-
-	// Method to switch to an iframe
-	public void switchToFrame(By by) {
-		try {
-			driver.switchTo().frame(driver.findElement(by));
-		} catch (Exception e) {
-		}
-	}
 
 	// Method to switch back to the default content
 	public void switchToDefaultContent() {
@@ -341,12 +289,6 @@ public class ActionDriver {
 	// ===================== Alert Handling =====================
 
 	// Method to accept an alert popup
-	public void acceptAlert() {
-		try {
-			driver.switchTo().alert().accept();
-		} catch (Exception e) {
-		}
-	}
 
 	// Method to dismiss an alert popup
 	public void dismissAlert() {
@@ -356,14 +298,7 @@ public class ActionDriver {
 		}
 	}
 
-	// Method to get alert text
-	public String getAlertText() {
-		try {
-			return driver.switchTo().alert().getText();
-		} catch (Exception e) {
-			return "";
-		}
-	}
+	
 
 	// ===================== Browser Actions =====================
 
@@ -392,25 +327,9 @@ public class ActionDriver {
 
 	// ===================== Advanced WebElement Actions =====================
 
-	public void moveToElement(By by) {
-		String elementDescription = getElementDescription(by);
-		try {
-			Actions actions = new Actions(driver);
-			actions.moveToElement(driver.findElement(by)).perform();
-		} catch (Exception e) {
-		}
-	}
+	
 
-	public void dragAndDrop(By source, By target) {
-		String sourceDescription = getElementDescription(source);
-		String targetDescription = getElementDescription(target);
-		try {
-			Actions actions = new Actions(driver);
-			actions.dragAndDrop(driver.findElement(source), driver.findElement(target)).perform();
-		} catch (Exception e) {
-		}
-	}
-
+	
 	public void doubleClick(By by) {
 		String elementDescription = getElementDescription(by);
 		try {
@@ -446,14 +365,143 @@ public class ActionDriver {
 		}
 	}
 
-	// Method to upload a file
-	public void uploadFile(By by, String filePath) {
-		try {
-			driver.findElement(by).sendKeys(filePath);
-			applyBorder(by, "green");
-		} catch (Exception e) {
-			applyBorder(by, "red");
-		}
-	}
+	
+	// ===================== Select Methods =====================
 
+		public void selectByVisibleText(By by, String value) {
+			String description = getElementDescription(by);
+			try {
+				WebElement element = driver.findElement(by);
+				new Select(element).selectByVisibleText(value);
+				applyBorder(by, "green");
+				logger.info("Selected '" + value + "' from dropdown: " + description);
+			} catch (Exception e) {
+				applyBorder(by, "red");
+				logger.error("Failed to select '" + value + "' from " + description + ". Error: " + e.getMessage());
+			}
+		}
+
+		public void selectByValue(By by, String value) {
+			String description = getElementDescription(by);
+			try {
+				WebElement element = driver.findElement(by);
+				new Select(element).selectByValue(value);
+				applyBorder(by, "green");
+				logger.info("Selected value '" + value + "' from: " + description);
+			} catch (Exception e) {
+				applyBorder(by, "red");
+				logger.error("Failed to select value '" + value + "'. Error: " + e.getMessage());
+			}
+		}
+
+		// ===================== JavaScript Utility Methods =====================
+
+		public void clickUsingJS(By by) {
+			String description = getElementDescription(by);
+			try {
+				WebElement element = driver.findElement(by);
+				((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);
+				applyBorder(by, "green");
+				logger.info("JS Click performed on: " + description);
+			} catch (Exception e) {
+				applyBorder(by, "red");
+				logger.error("JS Click failed on " + description + ". Error: " + e.getMessage());
+			}
+		}
+
+		public void scrollToBottom() {
+			try {
+				((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight);");
+				logger.info("Scrolled to the bottom of the page.");
+			} catch (Exception e) {
+				logger.error("Failed to scroll to bottom: " + e.getMessage());
+			}
+		}
+
+		// ===================== Window and Frame Handling =====================
+
+		public void switchToWindow(String windowTitle) {
+			try {
+				Set<String> windows = driver.getWindowHandles();
+				logger.debug("Total windows found: " + windows.size());
+				for (String window : windows) {
+					driver.switchTo().window(window);
+					if (driver.getTitle().equals(windowTitle)) {
+						logger.info("Switched to window with title: " + windowTitle);
+						return;
+					}
+				}
+			} catch (Exception e) {
+				logger.error("Unable to switch to window '" + windowTitle + "'. Error: " + e.getMessage());
+			}
+		}
+
+		public void switchToFrame(By by) {
+			String description = getElementDescription(by);
+			try {
+				driver.switchTo().frame(driver.findElement(by));
+				logger.info("Switched to iframe: " + description);
+			} catch (Exception e) {
+				logger.error("Failed to switch to iframe " + description + ". Error: " + e.getMessage());
+			}
+		}
+
+		// ===================== Alert Handling =====================
+
+		public void acceptAlert() {
+			try {
+				driver.switchTo().alert().accept();
+				logger.info("Browser alert accepted.");
+			} catch (Exception e) {
+				logger.error("No alert present to accept: " + e.getMessage());
+			}
+		}
+
+		public String getAlertText() {
+			try {
+				String text = driver.switchTo().alert().getText();
+				logger.info("Alert text captured: " + text);
+				return text;
+			} catch (Exception e) {
+				logger.error("Failed to get alert text.");
+				return "";
+			}
+		}
+
+		// ===================== Advanced WebElement Actions =====================
+
+		public void moveToElement(By by) {
+			String description = getElementDescription(by);
+			try {
+				Actions actions = new Actions(driver);
+				actions.moveToElement(driver.findElement(by)).perform();
+				logger.info("Moved mouse to: " + description);
+			} catch (Exception e) {
+				logger.error("Failed to move to " + description + ". Error: " + e.getMessage());
+			}
+		}
+
+		public void dragAndDrop(By source, By target) {
+			String srcDesc = getElementDescription(source);
+			String tarDesc = getElementDescription(target);
+			try {
+				Actions actions = new Actions(driver);
+				actions.dragAndDrop(driver.findElement(source), driver.findElement(target)).perform();
+				logger.info("Dragged " + srcDesc + " and dropped onto " + tarDesc);
+			} catch (Exception e) {
+				logger.error("Drag and Drop failed. Error: " + e.getMessage());
+			}
+		}
+
+		public void uploadFile(By by, String filePath) {
+			String description = getElementDescription(by);
+			try {
+				driver.findElement(by).sendKeys(filePath);
+				applyBorder(by, "green");
+				logger.info("File uploaded: [" + filePath + "] to " + description);
+			} catch (Exception e) {
+				applyBorder(by, "red");
+				logger.error("Failed to upload file to " + description + ". Error: " + e.getMessage());
+			}
+		}
 }

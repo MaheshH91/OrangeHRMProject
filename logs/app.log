@@ -76,3 +76,39 @@
 2026-02-10 21:54:37 [main] INFO  LoginPage - Login button clicked.
 2026-02-10 21:54:37 [main] INFO  LoginPage - Verifying if error message matches: Invalid credentials1
 2026-02-10 21:54:46 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
+2026-02-10 23:01:58 [main] INFO  BaseClass - Configuration properties loaded.
+2026-02-10 23:05:03 [main] INFO  BaseClass - chrome browser launched for thread: 1
+2026-02-10 23:05:03 [main] INFO  BaseClass - Webdriver Instance is created.
+2026-02-10 23:05:05 [main] INFO  BaseClass - Navigated to URL and setup completed for: LoginPageTest
+2026-02-10 23:05:05 [main] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-10 23:05:05 [main] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-10 23:05:05 [main] INFO  BaseClass - Starting valid login test...
+2026-02-10 23:05:05 [main] INFO  ConfigReader - config.properties loaded successfully via ClassLoader.
+2026-02-10 23:05:05 [main] INFO  LoginPage - Attempting login with username: Admin
+2026-02-10 23:07:01 [main] INFO  BaseClass - Entered text on['Element with name: username'] value ['Admin']
+2026-02-10 23:07:01 [main] DEBUG LoginPage - Entering password for user: Admin
+2026-02-10 23:07:01 [main] INFO  BaseClass - Entered text on['Element with name: password'] value ['admin123']
+2026-02-10 23:07:02 [main] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-10 23:07:02 [main] INFO  LoginPage - Login button clicked.
+2026-02-10 23:07:05 [main] INFO  BaseClass - Element is displayed: Element with text: Admin
+2026-02-10 23:07:05 [main] INFO  HomePage - Checking Admin Tab visibility: true
+2026-02-10 23:07:05 [main] INFO  HomePage - Attempting to logout...
+2026-02-10 23:07:06 [main] INFO  BaseClass - Clicked on an element: Element with text: FirstNameTest LastNameTest
+2026-02-10 23:07:17 [main] INFO  BaseClass - Clicked on an element: Element with text: Logout
+2026-02-10 23:07:17 [main] INFO  HomePage - Logout sequence completed.
+2026-02-10 23:07:17 [main] INFO  BaseClass - Valid login test passed and user logged out.
+2026-02-10 23:07:17 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
+2026-02-10 23:07:19 [main] INFO  BaseClass - chrome browser launched for thread: 1
+2026-02-10 23:07:19 [main] INFO  BaseClass - Webdriver Instance is created.
+2026-02-10 23:07:40 [main] INFO  BaseClass - Navigated to URL and setup completed for: LoginPageTest
+2026-02-10 23:07:40 [main] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-10 23:07:40 [main] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-10 23:07:40 [main] INFO  BaseClass - Starting invalid login test...
+2026-02-10 23:07:40 [main] INFO  LoginPage - Attempting login with username: wrongUser
+2026-02-10 23:07:42 [main] INFO  BaseClass - Entered text on['Element with name: username'] value ['wrongUser']
+2026-02-10 23:07:42 [main] DEBUG LoginPage - Entering password for user: wrongUser
+2026-02-10 23:07:43 [main] INFO  BaseClass - Entered text on['Element with name: password'] value ['wrongPass']
+2026-02-10 23:07:43 [main] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-10 23:07:43 [main] INFO  LoginPage - Login button clicked.
+2026-02-10 23:07:43 [main] INFO  LoginPage - Verifying if error message matches: Invalid credentials1
+2026-02-10 23:07:46 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
