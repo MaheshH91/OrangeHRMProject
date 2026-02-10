@@ -1,55 +1,57 @@
 package com.orangehrm.pages;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.orangehrm.actiondriver.ActionDriver;
 import com.orangehrm.base.BaseClass;
+import com.orangehrm.utilities.LoggerManager;
 
 public class LoginPage {
 
-	private ActionDriver actionDriver;
-	//define locators and methods for LoginPage
-	
-	private By usernameField = By.xpath("//input[@name='username']");
-	private By passwordField = By.cssSelector("input[type='password']");
-	private By loginButton = By.xpath("//button[@type='submit']");
-	private By errorMessage = By.xpath("//p[text()='Invalid credentials']");
-	
-	//constructor
-	/*
-	 * public LoginPage(WebDriver driver) { actionDriver = new ActionDriver(driver);
-	 * 
-	 * }
-	 */
-	
-	public LoginPage(WebDriver driver) {
-		actionDriver = BaseClass.getActionDriver();
-		
-	}
-	// Method to perform login
-	public void login(String username, String password) {
-//		actionDriver = new ActionDriver();
-		actionDriver.enterText(usernameField, username);
-		actionDriver.enterText(passwordField, password);
-		actionDriver.click(loginButton);
-	}
-	
-	//Method to check if error message is displayed
-	public boolean isErrorMessageDisplayed() {
-		return actionDriver.isDisplayed(errorMessage);
-	}
-	
-	//Method to get error message text
-	public String getErrorMessageText() {
-		return actionDriver.getText(errorMessage);
-	}
-	
-	// Verify if error message is correct or not
-	public boolean verifyErrorMessage(String expectedMessage) {
-		return actionDriver.compareText(errorMessage, expectedMessage);
-	}
-	
-	
-	
+    private ActionDriver actionDriver;
+    // Specific logger for LoginPage
+    private static final Logger logger = LoggerManager.getLogger(LoginPage.class);
+    
+    // Locators
+    private By usernameField = By.xpath("//input[@name='username']");
+    private By passwordField = By.cssSelector("input[type='password']");
+    private By loginButton = By.xpath("//button[@type='submit']");
+    private By errorMessage = By.xpath("//p[text()='Invalid credentials']");
+    
+    public LoginPage(WebDriver driver) {
+        this.actionDriver = BaseClass.getActionDriver();
+        logger.debug("LoginPage initialized successfully.");
+    }
+
+    // Method to perform login
+    public void login(String username, String password) {
+        logger.info("Attempting login with username: " + username);
+        actionDriver.enterText(usernameField, username);
+        
+        // We log that we're entering the password, but we don't log the actual password string for security
+        logger.debug("Entering password for user: " + username); 
+        actionDriver.enterText(passwordField, password);
+        
+        actionDriver.click(loginButton);
+        logger.info("Login button clicked.");
+    }
+    
+    public boolean isErrorMessageDisplayed() {
+        boolean isDisplayed = actionDriver.isDisplayed(errorMessage);
+        logger.warn("Checking for error message display. Status: " + isDisplayed);
+        return isDisplayed;
+    }
+    
+    public String getErrorMessageText() {
+        String text = actionDriver.getText(errorMessage);
+        logger.info("Captured error message text: " + text);
+        return text;
+    }
+    
+    public boolean verifyErrorMessage(String expectedMessage) {
+        logger.info("Verifying if error message matches: " + expectedMessage);
+        return actionDriver.compareText(errorMessage, expectedMessage);
+    }
 }

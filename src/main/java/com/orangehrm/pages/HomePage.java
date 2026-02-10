@@ -1,48 +1,51 @@
 package com.orangehrm.pages;
 
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import com.orangehrm.actiondriver.ActionDriver;
 import com.orangehrm.base.BaseClass;
+import com.orangehrm.utilities.LoggerManager;
 
 public class HomePage {
-	private ActionDriver actionDriver;
-	// Define locators and methods for HomePage
-	
-	private By adminTab = By.xpath("//span[text()='Admin']");
-	private By UserIdButton = By.cssSelector(".oxd-userdropdown-name");
-	private By logoutButton = By.xpath("//a[text()='Logout']");
-	private By orangeHrmLogo = By.xpath("//div[@class='oxd-brand-banner']/img");
-	
-	
-	 // Initialize ActionDriver in the constructor 
-	public HomePage(WebDriver driver) 
-	{
-//		this.actionDriver = new ActionDriver(driver) ;
-		actionDriver = BaseClass.getActionDriver();
-	}
-//	
-//	public HomePage(WebDriver driver) {
-//		this.actionDriver = BaseClass.getActionDriver();
-//	}
-	// Method to verify if Admin tab is visible
-	public boolean isAdminTabVisible() {
-		return actionDriver.isDisplayed(adminTab);
-	}
-	
-	// Method to verify if OrangeHRM logo is visible
-	public boolean isOrangeHrmLogoVisible() {
-		return actionDriver.isDisplayed(orangeHrmLogo);
-	}
-	//method to perform logout operation
-	public void logout() throws InterruptedException {
-		actionDriver.click(UserIdButton);
-		Thread.sleep(1000);
-		actionDriver.click(logoutButton);
-	}
-	// Method to click on Admin tab
-	public void clickAdminTab() {
-		actionDriver.click(adminTab);
-	}
+    private ActionDriver actionDriver;
+    
+    // Create a logger specific to HomePage
+    private static final Logger logger = LoggerManager.getLogger(HomePage.class);
+    
+    // Locators
+    private By adminTab = By.xpath("//span[text()='Admin']");
+    private By userIdButton = By.cssSelector(".oxd-userdropdown-name");
+    private By logoutButton = By.xpath("//a[text()='Logout']");
+    private By orangeHrmLogo = By.xpath("//div[@class='oxd-brand-banner']/img");
+    
+    public HomePage(WebDriver driver) {
+        this.actionDriver = BaseClass.getActionDriver();
+        logger.debug("HomePage initialized with ActionDriver.");
+    }
+
+    public boolean isAdminTabVisible() {
+        boolean isVisible = actionDriver.isDisplayed(adminTab);
+        logger.info("Checking Admin Tab visibility: " + isVisible);
+        return isVisible;
+    }
+    
+    public boolean isOrangeHrmLogoVisible() {
+        return actionDriver.isDisplayed(orangeHrmLogo);
+    }
+
+    public void logout() {
+        logger.info("Attempting to logout...");
+        actionDriver.click(userIdButton);
+        
+        // Instead of Thread.sleep, rely on ActionDriver's internal waits
+        actionDriver.click(logoutButton);
+        logger.info("Logout sequence completed.");
+    }
+
+    public void clickAdminTab() {
+        logger.info("Clicking on Admin tab.");
+        actionDriver.click(adminTab);
+    }
 }

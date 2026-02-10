@@ -1,0 +1,78 @@
+2026-02-10 21:29:39 [main] INFO  BaseClass - Configuration properties loaded.
+2026-02-10 21:29:42 [main] INFO  BaseClass - chrome browser launched for thread: 3
+2026-02-10 21:29:42 [main] INFO  BaseClass - Webdriver Instance is created.
+2026-02-10 21:29:56 [main] INFO  BaseClass - Navigated to URL and setup completed for: HomePageTest
+2026-02-10 21:30:00 [main] INFO  BaseClass - Entered ['Admin'] into: Element with name: username
+2026-02-10 21:30:03 [main] INFO  BaseClass - Entered ['admin123'] into: Element with name: password
+2026-02-10 21:30:15 [main] INFO  BaseClass - Clicked on: Element with text: Login
+2026-02-10 21:30:18 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
+2026-02-10 21:30:20 [main] INFO  BaseClass - chrome browser launched for thread: 3
+2026-02-10 21:30:20 [main] INFO  BaseClass - Webdriver Instance is created.
+2026-02-10 21:30:29 [main] INFO  BaseClass - Navigated to URL and setup completed for: LoginPageTest
+2026-02-10 21:30:32 [main] INFO  BaseClass - Entered ['admin'] into: Element with name: username
+2026-02-10 21:30:32 [main] INFO  BaseClass - Entered ['admin'] into: Element with name: password
+2026-02-10 21:30:33 [main] INFO  BaseClass - Clicked on: Element with text: Login
+2026-02-10 21:30:40 [main] INFO  BaseClass - Text comparison passed. Expected: 'Invalid credentials', Actual: 'Invalid credentials'
+2026-02-10 21:30:43 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
+2026-02-10 21:30:45 [main] INFO  BaseClass - chrome browser launched for thread: 3
+2026-02-10 21:30:45 [main] INFO  BaseClass - Webdriver Instance is created.
+2026-02-10 21:31:04 [main] INFO  BaseClass - Navigated to URL and setup completed for: LoginPageTest
+2026-02-10 21:31:10 [main] INFO  BaseClass - Entered ['Admin'] into: Element with name: username
+2026-02-10 21:31:10 [main] INFO  BaseClass - Entered ['admin123'] into: Element with name: password
+2026-02-10 21:31:11 [main] INFO  BaseClass - Clicked on: Element with text: Login
+2026-02-10 21:31:30 [main] INFO  BaseClass - Clicked on: Element with text: manda user
+2026-02-10 21:31:57 [main] INFO  BaseClass - Clicked on: Element with text: Logout
+2026-02-10 21:32:00 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
+2026-02-10 21:32:23 [main] INFO  BaseClass - Configuration properties loaded.
+2026-02-10 21:32:27 [main] INFO  BaseClass - chrome browser launched for thread: 1
+2026-02-10 21:32:27 [main] INFO  BaseClass - Webdriver Instance is created.
+2026-02-10 21:32:33 [main] INFO  BaseClass - Navigated to URL and setup completed for: LoginPageTest
+2026-02-10 21:32:45 [main] INFO  BaseClass - Entered ['admin'] into: Element with name: username
+2026-02-10 21:32:46 [main] INFO  BaseClass - Entered ['admin'] into: Element with name: password
+2026-02-10 21:32:46 [main] INFO  BaseClass - Clicked on: Element with text: Login
+2026-02-10 21:33:03 [main] INFO  BaseClass - Text comparison passed. Expected: 'Invalid credentials', Actual: 'Invalid credentials'
+2026-02-10 21:33:04 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
+2026-02-10 21:33:05 [main] INFO  BaseClass - chrome browser launched for thread: 1
+2026-02-10 21:33:05 [main] INFO  BaseClass - Webdriver Instance is created.
+2026-02-10 21:33:18 [main] INFO  BaseClass - Navigated to URL and setup completed for: LoginPageTest
+2026-02-10 21:33:24 [main] INFO  BaseClass - Entered ['Admin'] into: Element with name: username
+2026-02-10 21:33:24 [main] INFO  BaseClass - Entered ['admin123'] into: Element with name: password
+2026-02-10 21:33:37 [main] INFO  BaseClass - Clicked on: Element with text: Login
+2026-02-10 21:33:42 [main] INFO  BaseClass - Clicked on: Element with text: manda user
+2026-02-10 21:34:06 [main] INFO  BaseClass - Clicked on: Element with text: Logout
+2026-02-10 21:34:09 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
+2026-02-10 21:52:56 [main] INFO  BaseClass - Configuration properties loaded.
+2026-02-10 21:53:01 [main] INFO  BaseClass - chrome browser launched for thread: 1
+2026-02-10 21:53:01 [main] INFO  BaseClass - Webdriver Instance is created.
+2026-02-10 21:53:13 [main] INFO  BaseClass - Navigated to URL and setup completed for: LoginPageTest
+2026-02-10 21:53:13 [main] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-10 21:53:13 [main] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-10 21:53:13 [main] INFO  BaseClass - Starting valid login test...
+2026-02-10 21:53:13 [main] INFO  ConfigReader - config.properties loaded successfully via ClassLoader.
+2026-02-10 21:53:13 [main] INFO  LoginPage - Attempting login with username: Admin
+2026-02-10 21:53:20 [main] INFO  BaseClass - Entered ['Admin'] into: Element with name: username
+2026-02-10 21:53:20 [main] DEBUG LoginPage - Entering password for user: Admin
+2026-02-10 21:53:20 [main] INFO  BaseClass - Entered ['admin123'] into: Element with name: password
+2026-02-10 21:53:21 [main] INFO  BaseClass - Clicked on: Element with text: Login
+2026-02-10 21:53:21 [main] INFO  LoginPage - Login button clicked.
+2026-02-10 21:53:41 [main] INFO  HomePage - Checking Admin Tab visibility: true
+2026-02-10 21:53:41 [main] INFO  HomePage - Attempting to logout...
+2026-02-10 21:53:42 [main] INFO  BaseClass - Clicked on: Element with text: mandaMedMedMed user
+2026-02-10 21:54:17 [main] INFO  BaseClass - Clicked on: Element with text: Logout
+2026-02-10 21:54:17 [main] INFO  HomePage - Logout sequence completed.
+2026-02-10 21:54:17 [main] INFO  BaseClass - Valid login test passed and user logged out.
+2026-02-10 21:54:17 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
+2026-02-10 21:54:19 [main] INFO  BaseClass - chrome browser launched for thread: 1
+2026-02-10 21:54:19 [main] INFO  BaseClass - Webdriver Instance is created.
+2026-02-10 21:54:33 [main] INFO  BaseClass - Navigated to URL and setup completed for: LoginPageTest
+2026-02-10 21:54:33 [main] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-10 21:54:33 [main] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-10 21:54:33 [main] INFO  BaseClass - Starting invalid login test...
+2026-02-10 21:54:33 [main] INFO  LoginPage - Attempting login with username: wrongUser
+2026-02-10 21:54:36 [main] INFO  BaseClass - Entered ['wrongUser'] into: Element with name: username
+2026-02-10 21:54:36 [main] DEBUG LoginPage - Entering password for user: wrongUser
+2026-02-10 21:54:36 [main] INFO  BaseClass - Entered ['wrongPass'] into: Element with name: password
+2026-02-10 21:54:37 [main] INFO  BaseClass - Clicked on: Element with text: Login
+2026-02-10 21:54:37 [main] INFO  LoginPage - Login button clicked.
+2026-02-10 21:54:37 [main] INFO  LoginPage - Verifying if error message matches: Invalid credentials1
+2026-02-10 21:54:46 [main] INFO  BaseClass - Browser closed and ThreadLocal cleaned.
