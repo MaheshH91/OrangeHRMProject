@@ -15,7 +15,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.orangehrm.actiondriver.ActionDriver;
+import com.orangehrm.utilities.ExtentManager;
 import com.orangehrm.utilities.LoggerManager;
 import org.apache.logging.log4j.Logger;
 
@@ -35,35 +37,47 @@ public class BaseClass {
 			prop.load(fis);
 		}
 		logger.info("Configuration properties loaded.");
+		ExtentManager.getReporter();
 	}
 
 	@BeforeMethod
-	public void setup() {
+	public synchronized void setup() {
 		launchBrowser();
 
 		// Map the ActionDriver to the specific WebDriver of this thread
 		actionDriver.set(new ActionDriver(getDriver()));
 
-		getDriver().manage().window().maximize();
-		int implicitWait = Integer.parseInt(prop.getProperty("implicitWait").trim());
-		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
-
-		getDriver().get(prop.getProperty("url"));
-		logger.info("Setup completed for thread: " + Thread.currentThread().getId());
+		configureBrowser();
+		staticWait(2); // Small wait to ensure page loads before tests interact with it
+		logger.info("Setup and Navigation completed for thread: " + Thread.currentThread().getId());
 	}
-	private void launchBrowser() {
+
+	private synchronized void launchBrowser() {
 		String browser = prop.getProperty("browser");
 		WebDriver driverInstance;
 
 		// Initialize the specific driver instance
 		if (browser.equalsIgnoreCase("chrome")) {
-			driverInstance = new ChromeDriver();
+//			driverInstance = new ChromeDriver();
+			driver.set(new ChromeDriver());// new changes as per thread local
+			 driverInstance = driver.get(); // Get the instance from ThreadLocal
+			 logger.debug("ChromeDriver instance created for thread: " + Thread.currentThread().getId());
+			ExtentManager.registerDriver(getDriver());
 		} else if (browser.equalsIgnoreCase("firefox")) {
+			driver.set(new FirefoxDriver());// new changes as per thread local
+			 driverInstance = driver.get(); // Get the instance from ThreadLocal
+			 logger.debug("FirefoxDriver instance created for thread: " + Thread.currentThread().getId());
 			driverInstance = new FirefoxDriver();
+			ExtentManager.registerDriver(getDriver());
 		} else if (browser.equalsIgnoreCase("edge")) {
+			driver.set(new EdgeDriver());// new changes as per thread local
+			 driverInstance = driver.get(); // Get the instance from ThreadLocal
+			 logger.debug("EdgeDriver instance created for thread: " + Thread.currentThread().getId());
 			driverInstance = new EdgeDriver();
+			ExtentManager.registerDriver(getDriver());
 		} else {
 			logger.fatal("Browser type not supported: " + browser);
+			ExtentManager.logFailure(null, "Unsupported browser: " + browser, null);
 			throw new IllegalArgumentException("Unsupported browser!");
 		}
 
@@ -73,7 +87,7 @@ public class BaseClass {
 	}
 
 	@AfterMethod
-	public void tearDown() {
+	public synchronized void tearDown() {
 		WebDriver currentDriver = driver.get(); // Get the driver for this thread
 		if (currentDriver != null) {
 			try {
@@ -86,6 +100,7 @@ public class BaseClass {
 				// ALWAYS remove from ThreadLocal to prevent memory leaks
 				driver.remove();
 				actionDriver.remove();
+				ExtentManager.endTest(); // Clear the ExtentTest reference for this thread
 			}
 		}
 	}
@@ -117,6 +132,18 @@ public class BaseClass {
 //		driver.set(driverInstance);
 //		logger.info(browser + " browser launched for thread: " + Thread.currentThread().getId());
 //	}
+
+	private void configureBrowser() {
+		int implicitWait = Integer.parseInt(prop.getProperty("implicitWait").trim());
+		getDriver().manage().window().maximize();
+		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
+	try {
+		getDriver().get(prop.getProperty("url"));
+	}catch (Exception e) {
+		logger.error("Failed to navigate to URL: " + e.getMessage());
+	}
+		logger.info("Browser configured and navigated to URL for thread: " + Thread.currentThread().getId());
+	}
 
 	public static WebDriver getDriver() {
 		if (driver.get() == null) {

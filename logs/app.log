@@ -432,3 +432,278 @@
 2026-02-11 07:35:38 [TestNG-test-OrangeHRMTest-4] INFO  LoginPage - Login button clicked.
 2026-02-11 07:35:38 [TestNG-test-OrangeHRMTest-4] INFO  LoginPage - Verifying if error message matches: Invalid credentials1
 2026-02-11 07:35:40 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Browser closed for thread: 39
+2026-02-11 07:56:42 [main] INFO  BaseClass - Configuration properties loaded.
+2026-02-11 07:56:55 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - chrome browser launched for thread: 38
+2026-02-11 07:56:55 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - chrome browser launched for thread: 36
+2026-02-11 07:56:55 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - chrome browser launched for thread: 37
+2026-02-11 07:56:55 [TestNG-test-OrangeHRMTest-5] INFO  BaseClass - chrome browser launched for thread: 40
+2026-02-11 07:56:55 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 07:56:55 [TestNG-test-OrangeHRMTest-5] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 07:56:55 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 07:56:55 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 07:57:26 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Browser configured and navigated to URL for thread: 37
+2026-02-11 07:57:28 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Setup and Navigation completed for thread: 37
+2026-02-11 07:57:29 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Starting title verification for DummyClass2...
+2026-02-11 07:57:29 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - DummyClass2: Title validation successful.
+2026-02-11 07:57:32 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Browser closed for thread: 37
+2026-02-11 07:57:34 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Browser configured and navigated to URL for thread: 38
+2026-02-11 07:57:35 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Browser configured and navigated to URL for thread: 36
+2026-02-11 07:57:36 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Setup and Navigation completed for thread: 38
+2026-02-11 07:57:36 [TestNG-test-OrangeHRMTest-3] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 07:57:36 [TestNG-test-OrangeHRMTest-3] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 07:57:36 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - --- Starting verifyOrangeHRMLogo Test ---
+2026-02-11 07:57:36 [TestNG-test-OrangeHRMTest-3] INFO  ConfigReader - config.properties loaded successfully via ClassLoader.
+2026-02-11 07:57:36 [TestNG-test-OrangeHRMTest-3] INFO  LoginPage - Attempting login with username: Admin
+2026-02-11 07:57:36 [TestNG-test-OrangeHRMTest-5] INFO  BaseClass - Browser configured and navigated to URL for thread: 40
+2026-02-11 07:57:37 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Setup and Navigation completed for thread: 36
+2026-02-11 07:57:37 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Verifying page title. Actual: OrangeHRM
+2026-02-11 07:57:37 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Test Passed - Title matches OrangeHRM
+2026-02-11 07:57:38 [TestNG-test-OrangeHRMTest-5] INFO  BaseClass - Setup and Navigation completed for thread: 40
+2026-02-11 07:57:39 [TestNG-test-OrangeHRMTest-5] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 07:57:39 [TestNG-test-OrangeHRMTest-5] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 07:57:39 [TestNG-test-OrangeHRMTest-5] INFO  BaseClass - Starting invalid login test...
+2026-02-11 07:57:39 [TestNG-test-OrangeHRMTest-5] INFO  LoginPage - Attempting login with username: wrongUser
+2026-02-11 07:57:44 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - chrome browser launched for thread: 39
+2026-02-11 07:57:44 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 07:57:48 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Browser configured and navigated to URL for thread: 39
+2026-02-11 07:57:49 [TestNG-test-OrangeHRMTest-5] INFO  BaseClass - Entered text on['Element with name: username'] value ['wrongUser']
+2026-02-11 07:57:49 [TestNG-test-OrangeHRMTest-5] DEBUG LoginPage - Entering password for user: wrongUser
+2026-02-11 07:57:49 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Entered text on['Element with name: username'] value ['Admin']
+2026-02-11 07:57:49 [TestNG-test-OrangeHRMTest-3] DEBUG LoginPage - Entering password for user: Admin
+2026-02-11 07:57:50 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Setup and Navigation completed for thread: 39
+2026-02-11 07:57:50 [TestNG-test-OrangeHRMTest-4] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 07:57:50 [TestNG-test-OrangeHRMTest-4] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 07:57:50 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Starting valid login test...
+2026-02-11 07:57:50 [TestNG-test-OrangeHRMTest-4] INFO  LoginPage - Attempting login with username: Admin
+2026-02-11 07:57:56 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Entered text on['Element with name: password'] value ['admin123']
+2026-02-11 07:57:56 [TestNG-test-OrangeHRMTest-5] INFO  BaseClass - Entered text on['Element with name: password'] value ['wrongPass']
+2026-02-11 07:58:04 [TestNG-test-OrangeHRMTest-5] INFO  BaseClass - Clicked on an element: Element with text: 登录
+2026-02-11 07:58:04 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Clicked on an element: Element with text: 登录
+2026-02-11 07:58:04 [TestNG-test-OrangeHRMTest-3] INFO  LoginPage - Login button clicked.
+2026-02-11 07:58:04 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Validating OrangeHRM Logo...
+2026-02-11 07:58:04 [TestNG-test-OrangeHRMTest-5] INFO  LoginPage - Login button clicked.
+2026-02-11 07:58:04 [TestNG-test-OrangeHRMTest-5] INFO  LoginPage - Verifying if error message matches: Invalid credentials1
+2026-02-11 07:58:05 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Browser closed for thread: 36
+2026-02-11 07:58:14 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Element is displayed: Element located using: By.xpath: //div[@class='oxd-brand-banner']/img
+2026-02-11 07:58:14 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - --- verifyOrangeHRMLogo Test Passed ---
+2026-02-11 07:58:18 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Browser closed for thread: 38
+2026-02-11 07:59:01 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Entered text on['Element with name: username'] value ['Admin']
+2026-02-11 07:59:01 [TestNG-test-OrangeHRMTest-4] DEBUG LoginPage - Entering password for user: Admin
+2026-02-11 07:59:01 [TestNG-test-OrangeHRMTest-5] INFO  BaseClass - Browser closed for thread: 40
+2026-02-11 07:59:02 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Entered text on['Element with name: password'] value ['admin123']
+2026-02-11 07:59:07 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 07:59:07 [TestNG-test-OrangeHRMTest-4] INFO  LoginPage - Login button clicked.
+2026-02-11 07:59:11 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Element is displayed: Element with text: Admin
+2026-02-11 07:59:11 [TestNG-test-OrangeHRMTest-4] INFO  HomePage - Checking Admin Tab visibility: true
+2026-02-11 07:59:11 [TestNG-test-OrangeHRMTest-4] INFO  HomePage - Attempting to logout...
+2026-02-11 07:59:11 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Clicked on an element: Element with text: manda user
+2026-02-11 07:59:27 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Clicked on an element: Element with text: Logout
+2026-02-11 07:59:27 [TestNG-test-OrangeHRMTest-4] INFO  HomePage - Logout sequence completed.
+2026-02-11 07:59:27 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Valid login test passed and user logged out.
+2026-02-11 07:59:28 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Browser closed for thread: 39
+2026-02-11 08:00:03 [main] INFO  BaseClass - Configuration properties loaded.
+2026-02-11 08:00:09 [TestNG-tests-2] INFO  BaseClass - chrome browser launched for thread: 37
+2026-02-11 08:00:09 [TestNG-tests-1] INFO  BaseClass - chrome browser launched for thread: 36
+2026-02-11 08:00:09 [TestNG-tests-1] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:00:09 [TestNG-tests-2] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:00:11 [TestNG-tests-1] INFO  BaseClass - Browser configured and navigated to URL for thread: 36
+2026-02-11 08:00:11 [TestNG-tests-2] INFO  BaseClass - Browser configured and navigated to URL for thread: 37
+2026-02-11 08:00:13 [TestNG-tests-1] INFO  BaseClass - Setup and Navigation completed for thread: 36
+2026-02-11 08:00:13 [TestNG-tests-2] INFO  BaseClass - Setup and Navigation completed for thread: 37
+2026-02-11 08:00:21 [TestNG-tests-1] INFO  BaseClass - Verifying page title. Actual: OrangeHRM
+2026-02-11 08:00:21 [TestNG-tests-1] INFO  BaseClass - Test Passed - Title matches OrangeHRM
+2026-02-11 08:00:23 [TestNG-tests-1] INFO  BaseClass - Browser closed for thread: 36
+2026-02-11 08:00:25 [TestNG-tests-1] INFO  BaseClass - chrome browser launched for thread: 36
+2026-02-11 08:00:25 [TestNG-tests-1] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:00:27 [TestNG-tests-1] INFO  BaseClass - Browser configured and navigated to URL for thread: 36
+2026-02-11 08:00:27 [TestNG-tests-2] INFO  BaseClass - Verifying page title. Actual: OrangeHRM
+2026-02-11 08:00:27 [TestNG-tests-2] INFO  BaseClass - Test Passed - Title matches OrangeHRM
+2026-02-11 08:00:29 [TestNG-tests-1] INFO  BaseClass - Setup and Navigation completed for thread: 36
+2026-02-11 08:00:29 [TestNG-tests-2] INFO  BaseClass - Browser closed for thread: 37
+2026-02-11 08:00:32 [TestNG-tests-2] INFO  BaseClass - chrome browser launched for thread: 37
+2026-02-11 08:00:32 [TestNG-tests-2] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:00:42 [TestNG-tests-1] INFO  BaseClass - Starting title verification for DummyClass2...
+2026-02-11 08:00:42 [TestNG-tests-1] INFO  BaseClass - DummyClass2: Title validation successful.
+2026-02-11 08:00:43 [TestNG-tests-2] INFO  BaseClass - Browser configured and navigated to URL for thread: 37
+2026-02-11 08:00:43 [TestNG-tests-1] INFO  BaseClass - Browser closed for thread: 36
+2026-02-11 08:00:45 [TestNG-tests-2] INFO  BaseClass - Setup and Navigation completed for thread: 37
+2026-02-11 08:00:45 [TestNG-tests-2] INFO  BaseClass - Starting title verification for DummyClass2...
+2026-02-11 08:00:45 [TestNG-tests-2] INFO  BaseClass - DummyClass2: Title validation successful.
+2026-02-11 08:00:46 [TestNG-tests-1] INFO  BaseClass - chrome browser launched for thread: 36
+2026-02-11 08:00:46 [TestNG-tests-1] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:00:47 [TestNG-tests-2] INFO  BaseClass - Browser closed for thread: 37
+2026-02-11 08:00:48 [TestNG-tests-1] INFO  BaseClass - Browser configured and navigated to URL for thread: 36
+2026-02-11 08:00:50 [TestNG-tests-1] INFO  BaseClass - Setup and Navigation completed for thread: 36
+2026-02-11 08:00:50 [TestNG-tests-1] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 08:00:50 [TestNG-tests-1] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 08:00:51 [TestNG-tests-1] INFO  BaseClass - --- Starting verifyOrangeHRMLogo Test ---
+2026-02-11 08:00:51 [TestNG-tests-1] INFO  ConfigReader - config.properties loaded successfully via ClassLoader.
+2026-02-11 08:00:51 [TestNG-tests-1] INFO  LoginPage - Attempting login with username: Admin
+2026-02-11 08:00:51 [TestNG-tests-2] INFO  BaseClass - chrome browser launched for thread: 37
+2026-02-11 08:00:51 [TestNG-tests-2] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:01:05 [TestNG-tests-1] INFO  BaseClass - Entered text on['Element with name: username'] value ['Admin']
+2026-02-11 08:01:05 [TestNG-tests-1] DEBUG LoginPage - Entering password for user: Admin
+2026-02-11 08:01:06 [TestNG-tests-2] INFO  BaseClass - Browser configured and navigated to URL for thread: 37
+2026-02-11 08:01:06 [TestNG-tests-1] INFO  BaseClass - Entered text on['Element with name: password'] value ['admin123']
+2026-02-11 08:01:07 [TestNG-tests-1] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 08:01:07 [TestNG-tests-1] INFO  LoginPage - Login button clicked.
+2026-02-11 08:01:07 [TestNG-tests-1] INFO  BaseClass - Validating OrangeHRM Logo...
+2026-02-11 08:01:08 [TestNG-tests-2] INFO  BaseClass - Setup and Navigation completed for thread: 37
+2026-02-11 08:01:08 [TestNG-tests-2] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 08:01:08 [TestNG-tests-2] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 08:01:08 [TestNG-tests-2] INFO  BaseClass - --- Starting verifyOrangeHRMLogo Test ---
+2026-02-11 08:01:08 [TestNG-tests-2] INFO  LoginPage - Attempting login with username: Admin
+2026-02-11 08:01:09 [TestNG-tests-2] INFO  BaseClass - Entered text on['Element with name: username'] value ['Admin']
+2026-02-11 08:01:09 [TestNG-tests-2] DEBUG LoginPage - Entering password for user: Admin
+2026-02-11 08:01:11 [TestNG-tests-1] INFO  BaseClass - Element is displayed: Element located using: By.xpath: //div[@class='oxd-brand-banner']/img
+2026-02-11 08:01:11 [TestNG-tests-2] INFO  BaseClass - Entered text on['Element with name: password'] value ['admin123']
+2026-02-11 08:01:11 [TestNG-tests-1] INFO  BaseClass - --- verifyOrangeHRMLogo Test Passed ---
+2026-02-11 08:01:13 [TestNG-tests-1] INFO  BaseClass - Browser closed for thread: 36
+2026-02-11 08:01:16 [TestNG-tests-1] INFO  BaseClass - chrome browser launched for thread: 36
+2026-02-11 08:01:16 [TestNG-tests-1] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:01:16 [TestNG-tests-2] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 08:01:16 [TestNG-tests-2] INFO  LoginPage - Login button clicked.
+2026-02-11 08:01:16 [TestNG-tests-2] INFO  BaseClass - Validating OrangeHRM Logo...
+2026-02-11 08:01:20 [TestNG-tests-2] INFO  BaseClass - Element is displayed: Element located using: By.xpath: //div[@class='oxd-brand-banner']/img
+2026-02-11 08:01:20 [TestNG-tests-2] INFO  BaseClass - --- verifyOrangeHRMLogo Test Passed ---
+2026-02-11 08:01:20 [TestNG-tests-1] INFO  BaseClass - Browser configured and navigated to URL for thread: 36
+2026-02-11 08:01:22 [TestNG-tests-1] INFO  BaseClass - Setup and Navigation completed for thread: 36
+2026-02-11 08:01:22 [TestNG-tests-1] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 08:01:22 [TestNG-tests-1] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 08:01:22 [TestNG-tests-1] INFO  BaseClass - Starting valid login test...
+2026-02-11 08:01:22 [TestNG-tests-1] INFO  LoginPage - Attempting login with username: Admin
+2026-02-11 08:01:23 [TestNG-tests-2] INFO  BaseClass - Browser closed for thread: 37
+2026-02-11 08:01:26 [TestNG-tests-2] INFO  BaseClass - chrome browser launched for thread: 37
+2026-02-11 08:01:26 [TestNG-tests-2] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:01:38 [TestNG-tests-1] INFO  BaseClass - Entered text on['Element with name: username'] value ['Admin']
+2026-02-11 08:01:38 [TestNG-tests-1] DEBUG LoginPage - Entering password for user: Admin
+2026-02-11 08:01:38 [TestNG-tests-2] INFO  BaseClass - Browser configured and navigated to URL for thread: 37
+2026-02-11 08:01:39 [TestNG-tests-1] INFO  BaseClass - Entered text on['Element with name: password'] value ['admin123']
+2026-02-11 08:01:40 [TestNG-tests-1] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 08:01:40 [TestNG-tests-1] INFO  LoginPage - Login button clicked.
+2026-02-11 08:01:40 [TestNG-tests-2] INFO  BaseClass - Setup and Navigation completed for thread: 37
+2026-02-11 08:01:40 [TestNG-tests-2] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 08:01:40 [TestNG-tests-2] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 08:01:40 [TestNG-tests-2] INFO  BaseClass - Starting valid login test...
+2026-02-11 08:01:40 [TestNG-tests-2] INFO  LoginPage - Attempting login with username: Admin
+2026-02-11 08:01:41 [TestNG-tests-2] INFO  BaseClass - Entered text on['Element with name: username'] value ['Admin']
+2026-02-11 08:01:41 [TestNG-tests-2] DEBUG LoginPage - Entering password for user: Admin
+2026-02-11 08:01:42 [TestNG-tests-2] INFO  BaseClass - Entered text on['Element with name: password'] value ['admin123']
+2026-02-11 08:01:46 [TestNG-tests-2] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 08:01:46 [TestNG-tests-2] INFO  LoginPage - Login button clicked.
+2026-02-11 08:01:46 [TestNG-tests-1] INFO  BaseClass - Element is displayed: Element with text: Admin
+2026-02-11 08:01:46 [TestNG-tests-1] INFO  HomePage - Checking Admin Tab visibility: true
+2026-02-11 08:01:46 [TestNG-tests-1] INFO  HomePage - Attempting to logout...
+2026-02-11 08:01:48 [TestNG-tests-2] INFO  BaseClass - Element is displayed: Element with text: Admin
+2026-02-11 08:01:49 [TestNG-tests-2] INFO  HomePage - Checking Admin Tab visibility: true
+2026-02-11 08:01:49 [TestNG-tests-2] INFO  HomePage - Attempting to logout...
+2026-02-11 08:01:49 [TestNG-tests-1] INFO  BaseClass - Clicked on an element: Element with text: manda user
+2026-02-11 08:01:50 [TestNG-tests-2] INFO  BaseClass - Clicked on an element: Element with text: manda user
+2026-02-11 08:01:52 [TestNG-tests-1] INFO  BaseClass - Clicked on an element: Element with text: Logout
+2026-02-11 08:01:52 [TestNG-tests-1] INFO  HomePage - Logout sequence completed.
+2026-02-11 08:01:52 [TestNG-tests-1] INFO  BaseClass - Valid login test passed and user logged out.
+2026-02-11 08:01:54 [TestNG-tests-1] INFO  BaseClass - Browser closed for thread: 36
+2026-02-11 08:01:54 [TestNG-tests-2] INFO  BaseClass - Clicked on an element: Element with text: Logout
+2026-02-11 08:01:54 [TestNG-tests-2] INFO  HomePage - Logout sequence completed.
+2026-02-11 08:01:54 [TestNG-tests-2] INFO  BaseClass - Valid login test passed and user logged out.
+2026-02-11 08:01:58 [TestNG-tests-1] INFO  BaseClass - chrome browser launched for thread: 36
+2026-02-11 08:01:58 [TestNG-tests-1] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:02:00 [TestNG-tests-2] INFO  BaseClass - Browser closed for thread: 37
+2026-02-11 08:02:03 [TestNG-tests-1] INFO  BaseClass - Browser configured and navigated to URL for thread: 36
+2026-02-11 08:02:03 [TestNG-tests-2] INFO  BaseClass - chrome browser launched for thread: 37
+2026-02-11 08:02:03 [TestNG-tests-2] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:02:05 [TestNG-tests-1] INFO  BaseClass - Setup and Navigation completed for thread: 36
+2026-02-11 08:02:05 [TestNG-tests-1] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 08:02:05 [TestNG-tests-1] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 08:02:05 [TestNG-tests-1] INFO  BaseClass - Starting invalid login test...
+2026-02-11 08:02:05 [TestNG-tests-1] INFO  LoginPage - Attempting login with username: wrongUser
+2026-02-11 08:02:05 [TestNG-tests-2] INFO  BaseClass - Browser configured and navigated to URL for thread: 37
+2026-02-11 08:02:07 [TestNG-tests-2] INFO  BaseClass - Setup and Navigation completed for thread: 37
+2026-02-11 08:02:07 [TestNG-tests-2] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 08:02:07 [TestNG-tests-2] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 08:02:07 [TestNG-tests-2] INFO  BaseClass - Starting invalid login test...
+2026-02-11 08:02:07 [TestNG-tests-2] INFO  LoginPage - Attempting login with username: wrongUser
+2026-02-11 08:02:15 [TestNG-tests-2] INFO  BaseClass - Entered text on['Element with name: username'] value ['wrongUser']
+2026-02-11 08:02:15 [TestNG-tests-2] DEBUG LoginPage - Entering password for user: wrongUser
+2026-02-11 08:02:16 [TestNG-tests-2] INFO  BaseClass - Entered text on['Element with name: password'] value ['wrongPass']
+2026-02-11 08:02:18 [TestNG-tests-1] INFO  BaseClass - Entered text on['Element with name: username'] value ['wrongUser']
+2026-02-11 08:02:18 [TestNG-tests-1] DEBUG LoginPage - Entering password for user: wrongUser
+2026-02-11 08:02:19 [TestNG-tests-1] INFO  BaseClass - Entered text on['Element with name: password'] value ['wrongPass']
+2026-02-11 08:02:19 [TestNG-tests-2] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 08:02:19 [TestNG-tests-2] INFO  LoginPage - Login button clicked.
+2026-02-11 08:02:19 [TestNG-tests-2] INFO  LoginPage - Verifying if error message matches: Invalid credentials1
+2026-02-11 08:02:22 [TestNG-tests-1] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 08:02:22 [TestNG-tests-1] INFO  LoginPage - Login button clicked.
+2026-02-11 08:02:22 [TestNG-tests-1] INFO  LoginPage - Verifying if error message matches: Invalid credentials1
+2026-02-11 08:02:23 [TestNG-tests-2] INFO  BaseClass - Browser closed for thread: 37
+2026-02-11 08:02:24 [TestNG-tests-1] INFO  BaseClass - Browser closed for thread: 36
+2026-02-11 08:07:31 [main] INFO  BaseClass - Configuration properties loaded.
+2026-02-11 08:08:09 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - edge browser launched for thread: 40
+2026-02-11 08:08:09 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - edge browser launched for thread: 39
+2026-02-11 08:08:09 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:08:09 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:08:09 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - edge browser launched for thread: 38
+2026-02-11 08:08:09 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:08:10 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - edge browser launched for thread: 37
+2026-02-11 08:08:10 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:08:16 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Browser configured and navigated to URL for thread: 40
+2026-02-11 08:08:18 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Setup and Navigation completed for thread: 40
+2026-02-11 08:08:18 [TestNG-test-OrangeHRMTest-4] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 08:08:18 [TestNG-test-OrangeHRMTest-4] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 08:08:18 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Starting valid login test...
+2026-02-11 08:08:18 [TestNG-test-OrangeHRMTest-4] INFO  ConfigReader - config.properties loaded successfully via ClassLoader.
+2026-02-11 08:08:18 [TestNG-test-OrangeHRMTest-4] INFO  LoginPage - Attempting login with username: Admin
+2026-02-11 08:08:20 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Browser configured and navigated to URL for thread: 39
+2026-02-11 08:08:22 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Setup and Navigation completed for thread: 39
+2026-02-11 08:08:22 [TestNG-test-OrangeHRMTest-3] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 08:08:22 [TestNG-test-OrangeHRMTest-3] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 08:08:22 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - --- Starting verifyOrangeHRMLogo Test ---
+2026-02-11 08:08:22 [TestNG-test-OrangeHRMTest-3] INFO  LoginPage - Attempting login with username: Admin
+2026-02-11 08:09:06 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Browser configured and navigated to URL for thread: 38
+2026-02-11 08:09:08 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Setup and Navigation completed for thread: 38
+2026-02-11 08:09:08 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Starting title verification for DummyClass2...
+2026-02-11 08:09:08 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - DummyClass2: Title validation successful.
+2026-02-11 08:09:12 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Browser configured and navigated to URL for thread: 37
+2026-02-11 08:09:14 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Setup and Navigation completed for thread: 37
+2026-02-11 08:09:14 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Verifying page title. Actual: OrangeHRM
+2026-02-11 08:09:14 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Test Passed - Title matches OrangeHRM
+2026-02-11 08:09:19 [TestNG-test-OrangeHRMTest-1] INFO  BaseClass - Browser closed for thread: 37
+2026-02-11 08:09:19 [TestNG-test-OrangeHRMTest-2] INFO  BaseClass - Browser closed for thread: 38
+2026-02-11 08:09:19 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Entered text on['Element with name: username'] value ['Admin']
+2026-02-11 08:09:19 [TestNG-test-OrangeHRMTest-3] DEBUG LoginPage - Entering password for user: Admin
+2026-02-11 08:09:20 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Entered text on['Element with name: password'] value ['admin123']
+2026-02-11 08:09:28 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 08:09:28 [TestNG-test-OrangeHRMTest-3] INFO  LoginPage - Login button clicked.
+2026-02-11 08:09:28 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Validating OrangeHRM Logo...
+2026-02-11 08:09:30 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Entered text on['Element with name: username'] value ['Admin']
+2026-02-11 08:09:30 [TestNG-test-OrangeHRMTest-4] DEBUG LoginPage - Entering password for user: Admin
+2026-02-11 08:09:32 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Element is displayed: Element located using: By.xpath: //div[@class='oxd-brand-banner']/img
+2026-02-11 08:09:32 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - --- verifyOrangeHRMLogo Test Passed ---
+2026-02-11 08:09:32 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Entered text on['Element with name: password'] value ['admin123']
+2026-02-11 08:09:34 [TestNG-test-OrangeHRMTest-3] INFO  BaseClass - Browser closed for thread: 39
+2026-02-11 08:09:37 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 08:09:37 [TestNG-test-OrangeHRMTest-4] INFO  LoginPage - Login button clicked.
+2026-02-11 08:09:39 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Element is displayed: Element with text: Admin
+2026-02-11 08:09:39 [TestNG-test-OrangeHRMTest-4] INFO  HomePage - Checking Admin Tab visibility: true
+2026-02-11 08:09:39 [TestNG-test-OrangeHRMTest-4] INFO  HomePage - Attempting to logout...
+2026-02-11 08:09:40 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Clicked on an element: Element with text: manda user
+2026-02-11 08:09:45 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Clicked on an element: Element with text: Logout
+2026-02-11 08:09:45 [TestNG-test-OrangeHRMTest-4] INFO  HomePage - Logout sequence completed.
+2026-02-11 08:09:45 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Valid login test passed and user logged out.
+2026-02-11 08:09:46 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Browser closed for thread: 40
+2026-02-11 08:09:50 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - edge browser launched for thread: 40
+2026-02-11 08:09:50 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Webdriver Instance is created.
+2026-02-11 08:10:10 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Browser configured and navigated to URL for thread: 40
+2026-02-11 08:10:13 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Setup and Navigation completed for thread: 40
+2026-02-11 08:10:13 [TestNG-test-OrangeHRMTest-4] DEBUG LoginPage - LoginPage initialized successfully.
+2026-02-11 08:10:13 [TestNG-test-OrangeHRMTest-4] DEBUG HomePage - HomePage initialized with ActionDriver.
+2026-02-11 08:10:13 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Starting invalid login test...
+2026-02-11 08:10:13 [TestNG-test-OrangeHRMTest-4] INFO  LoginPage - Attempting login with username: wrongUser
+2026-02-11 08:10:14 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Entered text on['Element with name: username'] value ['wrongUser']
+2026-02-11 08:10:14 [TestNG-test-OrangeHRMTest-4] DEBUG LoginPage - Entering password for user: wrongUser
+2026-02-11 08:10:17 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Entered text on['Element with name: password'] value ['wrongPass']
+2026-02-11 08:10:19 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Clicked on an element: Element with text: Login
+2026-02-11 08:10:19 [TestNG-test-OrangeHRMTest-4] INFO  LoginPage - Login button clicked.
+2026-02-11 08:10:19 [TestNG-test-OrangeHRMTest-4] INFO  LoginPage - Verifying if error message matches: Invalid credentials1
+2026-02-11 08:10:21 [TestNG-test-OrangeHRMTest-4] INFO  BaseClass - Browser closed for thread: 40
+2026-02-16 21:09:49 [main] INFO  BaseClass - Configuration properties loaded.
