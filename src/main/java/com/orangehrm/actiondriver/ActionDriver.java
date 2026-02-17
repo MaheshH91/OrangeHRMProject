@@ -105,9 +105,8 @@ public class ActionDriver {
 			logger.info("Element is displayed " + getElementDescription(by));
 			ExtentManager.logStep("Element is displayed: "+getElementDescription(by));
 			ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element is displayed: ", "Element is displayed: "+getElementDescription(by));
-			boolean displayed = driver.findElement(by).isDisplayed();
 			logStep(desc + " is displayed");
-			return displayed;
+			return driver.findElement(by).isDisplayed();
 		} catch (Exception e) {
 			applyBorder(by,"red");
 			logger.error("Element is not displayed: " + e.getMessage());

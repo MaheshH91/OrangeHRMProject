@@ -41,7 +41,7 @@ public class LoginPageTest extends BaseClass {
     @Test(priority = 2, description = "Verify error message with invalid credentials")
     public void invalidLoginTest() {
         logger.info("Starting invalid login test...");
-        ExtentManager.startTest("Invalid Login Test");
+        ExtentManager.startTest("Invalid Login Test1");
         ExtentManager.logStep("Navigating to Login page entering valid credentials.");
         loginPage.login("wrongUser", "wrongPass");
         
