@@ -20,10 +20,13 @@ public class LoginPage {
     private By loginButton = By.xpath("//button[@type='submit']");
     private By errorMessage = By.xpath("//p[text()='Invalid credentials']");
     
+ 
     public LoginPage(WebDriver driver) {
+        // This calls your ThreadLocal getter which handles all the setup logic
         this.actionDriver = BaseClass.getActionDriver();
-        logger.debug("LoginPage initialized successfully.");
+        logger.debug("LoginPage initialized successfully using ThreadLocal ActionDriver.");
     }
+   
 
     // Method to perform login
     public void login(String username, String password) {

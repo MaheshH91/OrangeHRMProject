@@ -8,6 +8,7 @@ import com.orangehrm.base.BaseClass;
 import com.orangehrm.pages.HomePage;
 import com.orangehrm.pages.LoginPage;
 import com.orangehrm.utilities.ConfigReader;
+import com.orangehrm.utilities.ExtentManager;
 
 public class HomePageTest extends BaseClass {
     
@@ -23,15 +24,17 @@ public class HomePageTest extends BaseClass {
     @Test(description = "Verify OrangeHRM Logo visibility on Home Page")
     public void verifyOrangeHRMLogo() {
         logger.info("--- Starting verifyOrangeHRMLogo Test ---");
-        
+        ExtentManager.startTest("Verify OrangeHRM Logo Test");
         // Log in using credentials from ConfigReader
         loginPage.login(ConfigReader.get("username"), ConfigReader.get("password"));
         
         logger.info("Validating OrangeHRM Logo...");
+        ExtentManager.logStep("Logged in successfully, now checking for OrangeHRM logo visibility.");
         boolean isLogoVisible = homePage.isOrangeHrmLogoVisible();
         
         Assert.assertTrue(isLogoVisible, "OrangeHRM logo should be visible on the home page.");
-        
+        ExtentManager.logStep("Validation successful: OrangeHRM logo is visible.");
+
         logger.info("--- verifyOrangeHRMLogo Test Passed ---");
     }
 }

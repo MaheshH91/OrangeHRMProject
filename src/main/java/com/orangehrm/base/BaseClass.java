@@ -7,9 +7,12 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
 
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -23,7 +26,7 @@ import org.apache.logging.log4j.Logger;
 
 public class BaseClass {
 
-	protected static Properties prop;
+	public static Properties prop;
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	private static ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
 
@@ -53,56 +56,65 @@ public class BaseClass {
 	}
 
 	private synchronized void launchBrowser() {
-		String browser = prop.getProperty("browser");
-		WebDriver driverInstance;
+	    String browser = prop.getProperty("browser");
+	    WebDriver driverInstance = null;
 
-		// Initialize the specific driver instance
-		if (browser.equalsIgnoreCase("chrome")) {
-//			driverInstance = new ChromeDriver();
-			driver.set(new ChromeDriver());// new changes as per thread local
-			 driverInstance = driver.get(); // Get the instance from ThreadLocal
-			 logger.debug("ChromeDriver instance created for thread: " + Thread.currentThread().getId());
-			ExtentManager.registerDriver(getDriver());
-		} else if (browser.equalsIgnoreCase("firefox")) {
-			driver.set(new FirefoxDriver());// new changes as per thread local
-			 driverInstance = driver.get(); // Get the instance from ThreadLocal
-			 logger.debug("FirefoxDriver instance created for thread: " + Thread.currentThread().getId());
-			driverInstance = new FirefoxDriver();
-			ExtentManager.registerDriver(getDriver());
-		} else if (browser.equalsIgnoreCase("edge")) {
-			driver.set(new EdgeDriver());// new changes as per thread local
-			 driverInstance = driver.get(); // Get the instance from ThreadLocal
-			 logger.debug("EdgeDriver instance created for thread: " + Thread.currentThread().getId());
-			driverInstance = new EdgeDriver();
-			ExtentManager.registerDriver(getDriver());
-		} else {
-			logger.fatal("Browser type not supported: " + browser);
-			ExtentManager.logFailure(null, "Unsupported browser: " + browser, null);
-			throw new IllegalArgumentException("Unsupported browser!");
-		}
+	    if (browser.equalsIgnoreCase("chrome")) {
+	        ChromeOptions chOptions = new ChromeOptions();
+	        chOptions.addArguments("--remote-allow-origins=*");
+	        driverInstance = new ChromeDriver(chOptions);
+	        logger.debug("ChromeDriver instance created for thread: " + Thread.currentThread().getId());
 
-		// Store it in ThreadLocal once
-		driver.set(driverInstance);
-		logger.info(browser + " browser launched for thread: " + Thread.currentThread().getId());
+	    } else if (browser.equalsIgnoreCase("firefox")) {
+	        driverInstance = new FirefoxDriver();
+	        logger.debug("FirefoxDriver instance created for thread: " + Thread.currentThread().getId());
+
+	    } else if (browser.equalsIgnoreCase("edge")) {
+	        EdgeOptions options = new EdgeOptions();
+	        options.setPageLoadStrategy(PageLoadStrategy.NORMAL); 
+	        options.addArguments("--remote-allow-origins=*");
+	        driverInstance = new EdgeDriver(options);
+	        logger.debug("EdgeDriver instance created for thread: " + Thread.currentThread().getId());
+
+	    } else {
+	        // This block only runs if NO browser matches
+	        logger.fatal("Browser type not supported: " + browser);
+	        ExtentManager.logFailure(null, "Unsupported browser: " + browser, "N/A");
+	        throw new IllegalArgumentException("Unsupported browser: " + browser);
+	    }
+
+	    // IMPORTANT: Set to ThreadLocal and Register ONCE at the end
+	    driver.set(driverInstance);
+	    ExtentManager.registerDriver(driverInstance);
+	    
+	    logger.info(browser + " browser launched successfully for thread: " + Thread.currentThread().getId());
 	}
-
 	@AfterMethod
 	public synchronized void tearDown() {
-		WebDriver currentDriver = driver.get(); // Get the driver for this thread
-		if (currentDriver != null) {
-			try {
-				currentDriver.manage().deleteAllCookies();
-				currentDriver.quit();
-				logger.info("Browser closed for thread: " + Thread.currentThread().getId());
-			} catch (Exception e) {
-				logger.error("Error during tearDown: " + e.getMessage());
-			} finally {
-				// ALWAYS remove from ThreadLocal to prevent memory leaks
-				driver.remove();
-				actionDriver.remove();
-				ExtentManager.endTest(); // Clear the ExtentTest reference for this thread
-			}
-		}
+	    WebDriver currentDriver = driver.get(); 
+	    if (currentDriver != null) {
+	        try {
+	            // Optional: currentDriver.manage().deleteAllCookies(); 
+	            // Note: quit() usually cleans up session data anyway
+	            currentDriver.quit();
+	            logger.info("Browser closed for thread: " + Thread.currentThread().getId());
+	        } catch (Exception e) {
+	            logger.error("Error during tearDown for thread " + Thread.currentThread().getId() + ": " + e.getMessage());
+	        } finally {
+	            // 1. Remove WebDriver from ThreadLocal
+	            driver.remove();
+	            
+	            // 2. Remove ActionDriver from ThreadLocal
+	            if (actionDriver != null) {
+	                actionDriver.remove();
+	            }
+
+	            // 3. Clean up Extent Reporting references
+	            ExtentManager.unload(); 
+	            
+	            logger.debug("ThreadLocal cleanup completed for thread: " + Thread.currentThread().getId());
+	        }
+	    }
 	}
 //	private void launchBrowser() {
 //		String browser = prop.getProperty("browser");
@@ -134,32 +146,59 @@ public class BaseClass {
 //	}
 
 	private void configureBrowser() {
-		int implicitWait = Integer.parseInt(prop.getProperty("implicitWait").trim());
-		getDriver().manage().window().maximize();
-		getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
-	try {
-		getDriver().get(prop.getProperty("url"));
-	}catch (Exception e) {
-		logger.error("Failed to navigate to URL: " + e.getMessage());
-	}
-		logger.info("Browser configured and navigated to URL for thread: " + Thread.currentThread().getId());
-	}
+	    try {
+	        // 1. Parse and set timeouts first
+	        int implicitWait = Integer.parseInt(prop.getProperty("implicitWait").trim());
+	        int pageLoadTimeout = Integer.parseInt(prop.getProperty("pageLoadTimeout", "30").trim());
+	        
+	        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
+	        getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoadTimeout));
 
+	        // 2. Maximize window
+	        getDriver().manage().window().maximize();
+
+	        // 3. Navigate to URL
+	        String url = prop.getProperty("url");
+	        logger.info("Navigating to: " + url + " on thread: " + Thread.currentThread().getId());
+	        getDriver().get(url);
+
+	    } catch (NumberFormatException e) {
+	        logger.error("Invalid numeric value in config properties: " + e.getMessage());
+	        throw e;
+	    } catch (Exception e) {
+	        logger.error("Critical error during browser configuration: " + e.getMessage());
+	        // If we can't navigate, there's no point in continuing the test
+	        throw new RuntimeException("Could not configure browser or navigate to URL", e);
+	    }
+	    
+	    logger.info("Browser configured and navigated successfully for thread: " + Thread.currentThread().getId());
+	}
 	public static WebDriver getDriver() {
-		if (driver.get() == null) {
-			throw new IllegalStateException("WebDriver not initialized for thread: " + Thread.currentThread().getId());
-		}
-		return driver.get();
+	    WebDriver dr = driver.get();
+	    if (dr == null) {
+	        throw new IllegalStateException("WebDriver not initialized for thread: " + Thread.currentThread().getId());
+	    }
+	    
+	    // Additional check: Ensure the browser session hasn't been closed/quit already
+	    try {
+	        if (dr.toString().contains("null")) { 
+	            throw new IllegalStateException("WebDriver session is null/closed for thread: " + Thread.currentThread().getId());
+	        }
+	    } catch (Exception e) {
+	        throw new IllegalStateException("WebDriver session is unreachable for thread: " + Thread.currentThread().getId());
+	    }
+	    
+	    return dr;
 	}
-
 	public static ActionDriver getActionDriver() {
-		if (actionDriver.get() == null) {
-			// Fallback: if ActionDriver isn't set, initialize it using the current thread's
-			// driver
-			actionDriver.set(new ActionDriver(getDriver()));
-			logger.debug("ActionDriver lazy-initialized for thread: " + Thread.currentThread().getId());
-		}
-		return actionDriver.get();
+	    if (actionDriver.get() == null) {
+	        // Ensure we actually have a browser before creating the ActionDriver
+	        WebDriver currentDriver = getDriver(); 
+	        
+	        logger.debug("ActionDriver not found for thread " + Thread.currentThread().getId() + ". Initializing...");
+	        actionDriver.set(new ActionDriver(currentDriver));
+	    }
+	    return actionDriver.get();
 	}
 
 //	@AfterMethod
@@ -177,16 +216,27 @@ public class BaseClass {
 //		}
 //	}
 
-	public static Properties getProp() {
-		return prop;
+	public static String getProperty(String key) {
+	    String value = prop.getProperty(key);
+	    if (value == null) {
+	        logger.error("Key '" + key + "' not found in config.properties!");
+	        throw new RuntimeException("Missing configuration key: " + key);
+	    }
+	    return value.trim();
 	}
 
-	public void setDriver(ThreadLocal<WebDriver> driver) {
-		this.driver = driver;
-
+	/**
+	 * Sets the WebDriver instance for the current thread.
+	 * Use this if you are initializing the driver outside of launchBrowser() 
+	 * (e.g., in a specialized test or via dependency injection).
+	 */
+	public void setDriver(WebDriver driverInstance) {
+	    driver.set(driverInstance);
+	    logger.debug("Manual driver injection successful for thread: " + Thread.currentThread().getId());
 	}
-
 	public void staticWait(int seconds) {
-		LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(seconds));
-	}
-}
+	    if (seconds > 0) {
+	        logger.debug("Applying static wait: " + seconds + " seconds on thread " + Thread.currentThread().getId());
+	        LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(seconds));
+	    }
+	}}
