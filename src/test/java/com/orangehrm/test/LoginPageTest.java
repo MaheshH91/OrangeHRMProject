@@ -25,7 +25,7 @@ public class LoginPageTest extends BaseClass {
     @Test(priority = 1, description = "Verify user can login with valid credentials")
     public void verifyValidLoginTest() {
         logger.info("Starting valid login test...");
-        ExtentManager.startTest("Valid Login Test");
+//        ExtentManager.startTest("Valid Login Test");//This has been implemented in the TestListener
         ExtentManager.logStep("Navigating to Login page entering valid credentials.");
         // Use ConfigReader for cleaner code
         loginPage.login(ConfigReader.get("username"), ConfigReader.get("password"));
@@ -41,7 +41,7 @@ public class LoginPageTest extends BaseClass {
     @Test(priority = 2, description = "Verify error message with invalid credentials")
     public void invalidLoginTest() {
         logger.info("Starting invalid login test...");
-        ExtentManager.startTest("Invalid Login Test1");
+//        ExtentManager.startTest("Invalid Login Test1");//This has been implemented in the TestListener
         ExtentManager.logStep("Navigating to Login page entering valid credentials.");
         loginPage.login("wrongUser", "wrongPass");
         

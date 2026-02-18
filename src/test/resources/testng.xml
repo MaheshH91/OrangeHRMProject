@@ -4,7 +4,8 @@
 <!--<suite name="OrangeHRMSuite" parallel="tests" thread-count="5"> -->
 <suite name="OrangeHRMSuite" parallel="classes" thread-count="5">
 	<listeners>
-		<listener class-name="com.orangehrm.utilities.ListenerClass" />
+		<!-- <listener class-name="com.orangehrm.utilities.ListenerClass" /> -->
+		<listener class-name="com.orangehrm.listeners.TestListener" />
 	</listeners>
 	<test name="OrangeHRMTest">
 		<classes>

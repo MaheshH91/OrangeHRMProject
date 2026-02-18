@@ -86,7 +86,13 @@ public class ExtentManager {
 			attachScreenshot(driver, screenShotMessage);
 		}
 	}
-
+//	//Log a step validation with screenshot
+//		public static void logStepWithScreenshot(WebDriver driver, String logMessage, String screenShotMessage) {
+//			getTest().pass(logMessage);
+//			//Screenshot method
+//			attachScreenshot(driver,screenShotMessage);
+//			
+//		}
 	public static void logStepValidationForAPI(String logMessage) {
 		if (getTest() != null)
 			getTest().pass(logMessage);

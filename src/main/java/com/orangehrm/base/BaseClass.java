@@ -40,7 +40,7 @@ public class BaseClass {
 			prop.load(fis);
 		}
 		logger.info("Configuration properties loaded.");
-		ExtentManager.getReporter();
+//		ExtentManager.getReporter(); //This has been implemented in the TestListener class itself to ensure it's initialized before any test starts, and only once.
 	}
 
 	@BeforeMethod
@@ -110,7 +110,7 @@ public class BaseClass {
 	            }
 
 	            // 3. Clean up Extent Reporting references
-	            ExtentManager.unload(); 
+//	            ExtentManager.unload(); //This has been implemented in the TestListener 
 	            
 	            logger.debug("ThreadLocal cleanup completed for thread: " + Thread.currentThread().getId());
 	        }

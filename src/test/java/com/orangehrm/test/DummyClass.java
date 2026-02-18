@@ -11,7 +11,7 @@ public class DummyClass extends BaseClass {
 	@Test
 	public void dummyTest() {
 		// Use getDriver() for thread safety
-		ExtentManager.startTest("DummyTest1 Test");
+//		ExtentManager.startTest("DummyTest1 Test");  --//This has been implemented in the TestListener
 		logger.info("Starting Dummy Test - Verifying page title...");
 		String title = getDriver().getTitle();
 
