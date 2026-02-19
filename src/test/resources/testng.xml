@@ -6,6 +6,8 @@
 	<listeners>
 		<!-- <listener class-name="com.orangehrm.utilities.ListenerClass" /> -->
 		<listener class-name="com.orangehrm.listeners.TestListener" />
+		<listener
+			class-name="com.orangehrm.utilities.AnnotationTransformer" />
 	</listeners>
 	<test name="OrangeHRMTest">
 		<classes>
@@ -13,6 +15,7 @@
 			<class name="com.orangehrm.test.DummyClass2" />
 			<class name="com.orangehrm.test.LoginPageTest" />
 			<class name="com.orangehrm.test.HomePageTest" />
+			<class name="com.orangehrm.test.PIMTest" />
 		</classes>
 	</test> <!-- Test -->
 	<!-- <test name="OrangeHRMTest1" > <classes> <class name="com.orangehrm.test.DummyClass" 
