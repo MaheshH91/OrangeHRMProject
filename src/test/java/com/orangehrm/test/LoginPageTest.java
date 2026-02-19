@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 import com.orangehrm.base.BaseClass;
 import com.orangehrm.pages.HomePage;
 import com.orangehrm.pages.LoginPage;
-import com.orangehrm.utilities.ConfigReader; // Use your new utility!
+import com.orangehrm.utilities.DataProviders;
 import com.orangehrm.utilities.ExtentManager;
 
 public class LoginPageTest extends BaseClass {
@@ -22,13 +22,14 @@ public class LoginPageTest extends BaseClass {
         homePage = new HomePage(getDriver());
     }
 
-    @Test(priority = 1, description = "Verify user can login with valid credentials")
-    public void verifyValidLoginTest() {
+    @Test(dataProvider = "validLoginData", dataProviderClass = DataProviders.class ,  description = "Verify user can login with valid credentials")
+    public void verifyValidLoginTest(String username, String password) {
         logger.info("Starting valid login test...");
 //        ExtentManager.startTest("Valid Login Test");//This has been implemented in the TestListener
         ExtentManager.logStep("Navigating to Login page entering valid credentials.");
         // Use ConfigReader for cleaner code
-        loginPage.login(ConfigReader.get("username"), ConfigReader.get("password"));
+//        loginPage.login(ConfigReader.get("username"), ConfigReader.get("password"));
+        loginPage.login(username, password);
         ExtentManager.logStep("Verifying Admin table is visible after successfull login.");
         Assert.assertTrue(homePage.isAdminTabVisible(), "Admin tab should be visible after successful login.");
         ExtentManager.logStep("Validation successfull.");
@@ -38,14 +39,14 @@ public class LoginPageTest extends BaseClass {
         logger.info("Valid login test passed and user logged out.");
     }
 
-    @Test(priority = 2, description = "Verify error message with invalid credentials")
-    public void invalidLoginTest() {
+    @Test(dataProvider = "inValidLoginData", dataProviderClass = DataProviders.class, description = "Verify error message with invalid credentials")
+    public void invalidLoginTest(String username, String password) {
         logger.info("Starting invalid login test...");
 //        ExtentManager.startTest("Invalid Login Test1");//This has been implemented in the TestListener
         ExtentManager.logStep("Navigating to Login page entering valid credentials.");
-        loginPage.login("wrongUser", "wrongPass");
+        loginPage.login(username, password);
         
-        String expectedErrorMessage = "Invalid credentials";
+        String expectedErrorMessage = "Invalid credentials1";
         Assert.assertTrue(loginPage.verifyErrorMessage(expectedErrorMessage), 
             "Test Failed: The expected error message '" + expectedErrorMessage + "' was not displayed.");
         ExtentManager.logStep("Verified error message for invalid login.");

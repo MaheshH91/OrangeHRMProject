@@ -29,18 +29,27 @@ public class LoginPage {
    
 
     // Method to perform login
-    public void login(String username, String password) {
+//    public void login(String username, String password) {
+//        logger.info("Attempting login with username: " + username);
+//        actionDriver.enterText(usernameField, username);
+//        
+//        // We log that we're entering the password, but we don't log the actual password string for security
+//        logger.debug("Entering password for user: " + username); 
+//        actionDriver.enterText(passwordField, password);
+//        
+//        actionDriver.click(loginButton);
+//        logger.info("Login button clicked.");
+//    }
+    public HomePage login(String username, String password) {
         logger.info("Attempting login with username: " + username);
         actionDriver.enterText(usernameField, username);
-        
-        // We log that we're entering the password, but we don't log the actual password string for security
-        logger.debug("Entering password for user: " + username); 
         actionDriver.enterText(passwordField, password);
-        
         actionDriver.click(loginButton);
-        logger.info("Login button clicked.");
+        
+        // Return a new HomePage instance so the test can immediately 
+        // call methods like homePage.verifyAdminTab();
+        return new HomePage(BaseClass.getDriver());
     }
-    
     public boolean isErrorMessageDisplayed() {
         boolean isDisplayed = actionDriver.isDisplayed(errorMessage);
         logger.warn("Checking for error message display. Status: " + isDisplayed);

@@ -17,27 +17,38 @@ public class ActionDriver {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	public static final Logger logger = BaseClass.logger;
-
+	// Main constructor that pulls from properties
 	public ActionDriver(WebDriver driver) {
-	    this.driver = driver;
-	    // Get timeout, if missing or invalid, default to 30
-	    String propTimeout = BaseClass.getProperty("explicitWait");
-	    int explicitWait = (propTimeout != null) ? Integer.parseInt(propTimeout) : 30;
-	    
-	    this.wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWait));
-	    logger.info("ActionDriver initialized for thread: " + Thread.currentThread().getId());
+	    this(driver, Integer.parseInt(BaseClass.getProperty("explicitWait")));
 	}
 
-	// In ActionDriver.java
+	// Overloaded constructor for manual overrides
 	public ActionDriver(WebDriver driver, int timeout) {
-		this.driver = driver;
-
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-		logger.info("ActionDriver initialized with " + timeout + "s explicit wait.");
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
-		logger.info("WebDriver instance and Wait created");
+	    this.driver = driver;
+	    // Default to 30 if a non-positive timeout is passed
+	    int finalTimeout = (timeout > 0) ? timeout : 30;
+	    this.wait = new WebDriverWait(driver, Duration.ofSeconds(finalTimeout));
+	    logger.info("ActionDriver initialized with " + finalTimeout + "s wait on thread: " + Thread.currentThread().getId());
 	}
 
+	/*
+	 * public ActionDriver(WebDriver driver) { this.driver = driver; // Get timeout,
+	 * if missing or invalid, default to 30 String propTimeout =
+	 * BaseClass.getProperty("explicitWait"); int explicitWait = (propTimeout !=
+	 * null) ? Integer.parseInt(propTimeout) : 30;
+	 * 
+	 * this.wait = new WebDriverWait(driver, Duration.ofSeconds(explicitWait));
+	 * logger.info("ActionDriver initialized for thread: " +
+	 * Thread.currentThread().getId()); }
+	 * 
+	 * // In ActionDriver.java public ActionDriver(WebDriver driver, int timeout) {
+	 * this.driver = driver;
+	 * 
+	 * this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	 * logger.info("ActionDriver initialized with " + timeout + "s explicit wait.");
+	 * this.wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+	 * logger.info("WebDriver instance and Wait created"); }
+	 */
 	// ================= COMMON LOGGER =================
 	private void logStep(String message) {
 		logger.info(message);
@@ -71,13 +82,13 @@ public class ActionDriver {
 			WebElement element = driver.findElement(by);
 			element.clear();
 			element.sendKeys(value);
-			
+
 			logStep("Entered text '" + value + "' into " + desc);
 		} catch (Exception e) {
 			applyBorder(by, "red");
 			ExtentManager.logFailure(BaseClass.getDriver(), "Failed to enter text into " + desc,
 					ExtentManager.takeScreenshot(BaseClass.getDriver(), desc));
-			throw e;
+			logger.error("Enter text action failed on " + desc + ". Exception: " + e.getMessage());
 		}
 	}
 
@@ -93,6 +104,7 @@ public class ActionDriver {
 			applyBorder(by, "red");
 			ExtentManager.logFailure(driver, "Failed to get text from " + desc,
 					ExtentManager.takeScreenshot(driver, desc));
+			logger.error("Get text action failed on " + desc + ". Exception: " + e.getMessage());
 			return "";
 		}
 	}
@@ -103,28 +115,30 @@ public class ActionDriver {
 			waitForElementToBeVisible(by);
 			applyBorder(by, "green");
 			logger.info("Element is displayed " + getElementDescription(by));
-			ExtentManager.logStep("Element is displayed: "+getElementDescription(by));
-			ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element is displayed: ", "Element is displayed: "+getElementDescription(by));
+			ExtentManager.logStep("Element is displayed: " + getElementDescription(by));
+			ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Element is displayed: ",
+					"Element is displayed: " + getElementDescription(by));
 			logStep(desc + " is displayed");
 			return driver.findElement(by).isDisplayed();
 		} catch (Exception e) {
-			applyBorder(by,"red");
+			applyBorder(by, "red");
 			logger.error("Element is not displayed: " + e.getMessage());
-			ExtentManager.logFailure(BaseClass.getDriver(),"Element is not displayed: ","Elemenet is not displayed: "+getElementDescription(by));
+			ExtentManager.logFailure(BaseClass.getDriver(), "Element is not displayed: ",
+					"Elemenet is not displayed: " + getElementDescription(by));
 			return false;
 		}
 	}
 
 	// ================= WAIT HELPERS =================
 	private void waitForElementToBeVisible(By by) {
-	try {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-	}catch (Exception e) {
-		logger.error("Element not visible: " + getElementDescription(by) + ". Exception: " + e.getMessage());
-		ExtentManager.logFailure(BaseClass.getDriver(), "Element not visible: " + getElementDescription(by),
-				ExtentManager.takeScreenshot(BaseClass.getDriver(), getElementDescription(by)));
-		throw e;
-	}
+		try {
+			wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+		} catch (Exception e) {
+			logger.error("Element not visible: " + getElementDescription(by) + ". Exception: " + e.getMessage());
+			ExtentManager.logFailure(BaseClass.getDriver(), "Element not visible: " + getElementDescription(by),
+					ExtentManager.takeScreenshot(BaseClass.getDriver(), getElementDescription(by)));
+			throw e;
+		}
 	}
 
 	private void waitForElementToBeClickable(By by) {
@@ -138,16 +152,15 @@ public class ActionDriver {
 
 	public void waitForPageLoad(int timeout) {
 		try {
-		wait.withTimeout(Duration.ofSeconds(timeout)).until(
-				driver -> ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete"));
-		logStep("Page loaded successfully");
-	}
-		catch (Exception e) {
-		ExtentManager.logFailure(driver, "Page did not load within " + timeout + " seconds",
-				ExtentManager.takeScreenshot(driver, "page_load_timeout"));
-		logger.error("Page load timeout: " + e.getMessage());
-		throw e;
-	}
+			wait.withTimeout(Duration.ofSeconds(timeout)).until(driver -> ((JavascriptExecutor) driver)
+					.executeScript("return document.readyState").equals("complete"));
+			logStep("Page loaded successfully");
+		} catch (Exception e) {
+			ExtentManager.logFailure(driver, "Page did not load within " + timeout + " seconds",
+					ExtentManager.takeScreenshot(driver, "page_load_timeout"));
+			logger.error("Page load timeout: " + e.getMessage());
+			throw e;
+		}
 	}
 
 	// Method to compare text of an element with expected text and log the result
@@ -162,12 +175,12 @@ public class ActionDriver {
 	public void scrollToElement(By by) {
 		String desc = getElementDescription(by);
 		try {
-			applyBorder(by,"green");
+			applyBorder(by, "green");
 			WebElement element = driver.findElement(by);
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 			logStep("Scrolled to " + desc);
 		} catch (Exception e) {
-			applyBorder(by,"red");
+			applyBorder(by, "red");
 			ExtentManager.logFailure(driver, "Failed to scroll to " + desc, ExtentManager.takeScreenshot(driver, desc));
 			throw e;
 		}
@@ -285,7 +298,10 @@ public class ActionDriver {
 		try {
 			WebElement element = driver.findElement(by);
 			((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid " + color + "'", element);
+			logger.info("Applied " + color + " border to element" + getElementDescription(by));
 		} catch (Exception ignored) {
+			logger.warn("Unable to apply border to element: " + getElementDescription(by) + ". Exception: "
+					+ ignored.getMessage());
 		}
 	}
 

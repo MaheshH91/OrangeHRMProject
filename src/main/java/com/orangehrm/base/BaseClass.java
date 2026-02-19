@@ -1,5 +1,6 @@
 package com.orangehrm.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -18,7 +19,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.orangehrm.actiondriver.ActionDriver;
 import com.orangehrm.utilities.ExtentManager;
 import com.orangehrm.utilities.LoggerManager;
@@ -32,17 +32,30 @@ public class BaseClass {
 
 	public static final Logger logger = LoggerManager.getLogger(BaseClass.class);
 
+//	@BeforeSuite
+//	public void loadConfig() throws IOException {
+//		prop = new Properties();
+//		try (FileInputStream fis = new FileInputStream(
+//				System.getProperty("user.dir") + "/src/main/resources/config.properties")) {
+//			prop.load(fis);
+//		}
+//		logger.info("Configuration properties loaded.");
+////		ExtentManager.getReporter(); //This has been implemented in the TestListener class itself to ensure it's initialized before any test starts, and only once.
+//	}
 	@BeforeSuite
 	public void loadConfig() throws IOException {
-		prop = new Properties();
-		try (FileInputStream fis = new FileInputStream(
-				System.getProperty("user.dir") + "/src/main/resources/config.properties")) {
-			prop.load(fis);
-		}
-		logger.info("Configuration properties loaded.");
-//		ExtentManager.getReporter(); //This has been implemented in the TestListener class itself to ensure it's initialized before any test starts, and only once.
+	    prop = new Properties();
+	    String path = System.getProperty("user.dir") + "/src/main/resources/config.properties";
+	    File file = new File(path);
+	    if (!file.exists()) {
+	        logger.fatal("Config file not found at: " + path);
+	        throw new RuntimeException("Configuration file missing!");
+	    }
+	    try (FileInputStream fis = new FileInputStream(file)) {
+	        prop.load(fis);
+	    }
+	    logger.info("Configuration properties loaded successfully.");
 	}
-
 	@BeforeMethod
 	public synchronized void setup() {
 		launchBrowser();
