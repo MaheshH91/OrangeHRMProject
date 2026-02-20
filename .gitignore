@@ -1,1 +1,65 @@
 /target/
+
+##############################
+## Java
+##############################
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+##############################
+## Maven
+##############################
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.bak
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+##############################
+## TestNG Reports
+##############################
+test-output/
+surefire-reports/
+emailable-report.html
+custom-report.html
+
+##############################
+## Extent Reports
+##############################
+extent-reports/
+ExtentReports/
+*.html
+*.json
+*.xml
+
+##############################
+## Logs
+##############################
+*.log
+logs/
+log/
+
+
+##############################
+## Eclipse
+##############################
+.classpath
+.project
+.settings/
+bin/
+
+##############################
+## OS Files
+##############################
+*.DS_Store
+Thumbs.db
