@@ -3,6 +3,7 @@ package com.orangehrm.test;
 
 import java.util.Map;
 
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -18,6 +19,7 @@ public class DBVerificationTest extends BaseClass {
 	
 	private LoginPage loginPage;
 	private HomePage homePage;
+	public static final Logger logger = BaseClass.logger;
 	
 	@BeforeMethod
 	public void setupPages() {

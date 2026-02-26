@@ -31,6 +31,8 @@ public class BaseClass {
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	private static ThreadLocal<ActionDriver> actionDriver = new ThreadLocal<>();
 
+	protected ThreadLocal<SoftAssert> softAssert = ThreadLocal.withInitial(SoftAssert::new);
+	
 	public static final Logger logger = LoggerManager.getLogger(BaseClass.class);
 
 //	@BeforeSuite
@@ -160,7 +162,7 @@ public class BaseClass {
 //	}
 	public SoftAssert getSoftAssert() {
 	    logger.debug("Initializing SoftAssert for thread: " + Thread.currentThread().getId());
-	    return new SoftAssert();
+	    return  softAssert.get();
 	}
 	private void configureBrowser() {
 	    try {
