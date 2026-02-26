@@ -11,11 +11,12 @@
 	</listeners>
 	<test name="OrangeHRMTest">
 		<classes>
-			<class name="com.orangehrm.test.DummyClass" />
+		<class name="com.orangehrm.test.DBVerificationTest" />
+			<!-- <class name="com.orangehrm.test.DummyClass" />
 			<class name="com.orangehrm.test.DummyClass2" />
 			<class name="com.orangehrm.test.LoginPageTest" />
-			<class name="com.orangehrm.test.HomePageTest" />
-			<class name="com.orangehrm.test.PIMTest" />
+			<class name="com.orangehrm.test.HomePageTest" /> -->
+			<!-- <class name="com.orangehrm.test.PIMTest" /> -->
 		</classes>
 	</test> <!-- Test -->
 	<!-- <test name="OrangeHRMTest1" > <classes> <class name="com.orangehrm.test.DummyClass" 

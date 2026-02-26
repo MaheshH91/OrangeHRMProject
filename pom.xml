@@ -15,7 +15,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
-		<selenium.java.version>4.40.0</selenium.java.version>
+		<selenium.java.version>4.41.0</selenium.java.version>
 		<testng.version>7.11.0</testng.version>
 
 	</properties>
@@ -82,11 +82,12 @@
 			<version>5.4.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+		<!-- Source:
+		https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
-			<version>9.5.0</version>
+			<version>9.6.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->

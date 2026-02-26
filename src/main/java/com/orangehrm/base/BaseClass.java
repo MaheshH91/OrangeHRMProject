@@ -18,6 +18,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.asserts.SoftAssert;
 
 import com.orangehrm.actiondriver.ActionDriver;
 import com.orangehrm.utilities.ExtentManager;
@@ -157,7 +158,10 @@ public class BaseClass {
 //		driver.set(driverInstance);
 //		logger.info(browser + " browser launched for thread: " + Thread.currentThread().getId());
 //	}
-
+	public SoftAssert getSoftAssert() {
+	    logger.debug("Initializing SoftAssert for thread: " + Thread.currentThread().getId());
+	    return new SoftAssert();
+	}
 	private void configureBrowser() {
 	    try {
 	        // 1. Parse and set timeouts first
