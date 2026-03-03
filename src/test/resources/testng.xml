@@ -11,7 +11,8 @@
 	</listeners>
 	<test name="OrangeHRMTest">
 		<classes>
-		<class name="com.orangehrm.test.DBVerificationTest" />
+		<class name="com.orangehrm.test.DBVerificationTest" /> 
+		<class name="com.orangehrm.test.ApiTest" />
 			<!-- <class name="com.orangehrm.test.DummyClass" />
 			<class name="com.orangehrm.test.DummyClass2" />
 			<class name="com.orangehrm.test.LoginPageTest" />

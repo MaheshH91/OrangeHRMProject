@@ -5,13 +5,13 @@ import org.testng.ITestResult;
 
 public class RetryAnalyzer implements IRetryAnalyzer {
 
-    private int count = 0;
-    private static final int MAX_RETRY_COUNT = 1; // You can increase this to 2 or 3
+    private int retryCount = 0; //number of retries attempted
+    private static final int MAX_RETRY_COUNT = 2; //maximum no of retries
 
     @Override
     public boolean retry(ITestResult result) {
-        if (count < MAX_RETRY_COUNT) {
-            count++;
+        if (retryCount < MAX_RETRY_COUNT) {
+        	retryCount++;
             return true; // Tells TestNG to run the test again
         }
         return false;

@@ -1,15 +1,23 @@
 package com.orangehrm.listeners;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
+
 import org.testng.IAnnotationTransformer;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.ITestAnnotation;
 
 import com.orangehrm.base.BaseClass;
 import com.orangehrm.utilities.ExtentManager;
+import com.orangehrm.utilities.RetryAnalyzer;
 
 public class TestListener extends BaseClass implements ITestListener, IAnnotationTransformer {
-
+	@Override
+	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
+		annotation.setRetryAnalyzer(RetryAnalyzer.class);
+	}
 	@Override
 	public void onStart(ITestContext context) {
 		ExtentManager.getReporter();
@@ -29,10 +37,12 @@ public class TestListener extends BaseClass implements ITestListener, IAnnotatio
 		String testName = result.getMethod().getMethodName();
 		logger.info("Test Passed: " + testName);
 
-		// Directly log success with a final screenshot of the state
-		// where the test finished successfully.
-		ExtentManager.logStepWithScreenshot(getDriver(), "Test Case: " + testName + " passed successfully.",
-				"Success_Screenshot_" + testName);
+		if (!result.getTestClass().getName().toLowerCase().contains("api")) {
+			ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Test Passed Successfully!",
+					"Test End: " + testName + " - ✔ Test Passed");
+		} else {
+			ExtentManager.logStepValidationForAPI("Test End: " + testName + " - ✔ Test Passed");
+		}
 
 		// Standard Extent pass log
 		ExtentManager.getTest().pass("Verified: " + testName);
@@ -44,9 +54,14 @@ public class TestListener extends BaseClass implements ITestListener, IAnnotatio
 		String failureMessage = result.getThrowable().getMessage();
 		logger.error("Test Failed: " + testName + " | Error: " + failureMessage);
 
-		// One call handles: Red Text Log + Screenshot + Exception Message
-		ExtentManager.logFailure(getDriver(), "<b>Test Failed: " + testName + "</b><br>Reason: " + failureMessage,
-				"Failure Screenshot");
+
+		if (!result.getTestClass().getName().toLowerCase().contains("api")) {
+			ExtentManager.logStepWithScreenshot(BaseClass.getDriver(), "Test Failed!",
+					"The End: " + testName + "X Test Failed");
+		} else {
+			ExtentManager.logStepValidationForAPI("Test End: " + testName + " -  Test Failed");
+		}
+		
 	}
 
 	@Override
@@ -61,6 +76,7 @@ public class TestListener extends BaseClass implements ITestListener, IAnnotatio
 		// Crucial: Clear thread locals to prevent memory leaks if running in parallel
 		ExtentManager.unload();
 	}
+	
 }
 //public class TestListener extends BaseClass implements ITestListener, IAnnotationTransformer {
 //	//Triggered when the test suite starts

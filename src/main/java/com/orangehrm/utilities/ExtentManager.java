@@ -105,7 +105,7 @@ public class ExtentManager {
 			attachScreenshot(driver, screenShotMessage);
 		}
 	}
-
+//Log a failure API
 	public static void logFailureAPI(String logMessage) {
 		if (getTest() != null) {
 			String colorMessage = String.format("<span style='color:red;'>%s</span>", logMessage);
