@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 public class DataProviders {
     
     // Path to your Excel file
-    private static final String FILE_PATH = System.getProperty("user.dir") + "/src/test/resources/testdata/TestData.ods";
+    private static final String FILE_PATH = System.getProperty("user.dir") + "/src/test/resources/testdata/TestData.xlsx";
 
     @DataProvider(name = "validLoginData")
     public static Object[][] validLoginData() {
