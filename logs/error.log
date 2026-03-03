@@ -63,3 +63,830 @@ Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55808}, goog:processID: 28508, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55808/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: 7e2e0f62cf01e4120ae3e68ff0b61956
 2026-02-11 07:35:39 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Text comparison failed. Expected: 'Invalid credentials1', Actual: 'Invalid credentials'
+2026-02-11 07:58:40 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not visible: Expected condition failed: waiting for visibility of element found by By.xpath: //p[text()='Invalid credentials'], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Invalid credentials']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56400}, goog:processID: 29392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56400/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 33edd9bcf9101af6a2b8ad939c728e7e
+2026-02-11 07:59:00 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Unable to compare text: no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='Invalid credentials']"}
+  (Session info: chrome=144.0.7559.133)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [33edd9bcf9101af6a2b8ad939c728e7e, findElement {using=xpath, value=//p[text()='Invalid credentials']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 144.0.7559.133, chrome: {chromedriverVersion: 144.0.7559.133 (7da823b1d59..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56400}, goog:processID: 29392, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56400/devtoo..., se:cdpVersion: 144.0.7559.133, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 33edd9bcf9101af6a2b8ad939c728e7e
+2026-02-11 08:02:21 [TestNG-tests-2] ERROR BaseClass - Text comparison failed. Expected: 'Invalid credentials1', Actual: 'Invalid credentials'
+2026-02-11 08:02:23 [TestNG-tests-1] ERROR BaseClass - Text comparison failed. Expected: 'Invalid credentials1', Actual: 'Invalid credentials'
+2026-02-11 08:10:20 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Text comparison failed. Expected: 'Invalid credentials1', Actual: 'Invalid credentials'
+2026-02-16 21:15:20 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Failed to navigate to URL: java.util.concurrent.TimeoutException
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b94b2d8f407fd758ec94c5a66753571a, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 31476, ms:edgeOptions: {debuggerAddress: localhost:63953}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63953/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b94b2d8f407fd758ec94c5a66753571a
+2026-02-16 21:15:21 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Failed to navigate to URL: java.util.concurrent.TimeoutException
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [7220fd9f05096d26d209945093ccaa7f, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 13008, ms:edgeOptions: {debuggerAddress: localhost:63055}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63055/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7220fd9f05096d26d209945093ccaa7f
+2026-02-16 21:56:48 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 28.248
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [103cab6cb4ebe9a32a26c272075e5cab, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 21192, ms:edgeOptions: {debuggerAddress: localhost:61468}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61468/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 103cab6cb4ebe9a32a26c272075e5cab
+2026-02-17 20:51:56 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 25.818
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [038065afbf42ad700abed25b8f76c7ba, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 36672, ms:edgeOptions: {debuggerAddress: localhost:63918}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63918/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 038065afbf42ad700abed25b8f76c7ba
+2026-02-17 20:51:57 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 27.055
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [00e1c43c858c62937ab4bd51a46e0a55, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 25164, ms:edgeOptions: {debuggerAddress: localhost:63920}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63920/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00e1c43c858c62937ab4bd51a46e0a55
+2026-02-17 20:51:58 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 28.001
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [274c3288b801f70cf8a9c8f99cab7253, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 9380, ms:edgeOptions: {debuggerAddress: localhost:63921}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63921/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 274c3288b801f70cf8a9c8f99cab7253
+2026-02-17 20:52:08 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Element not visible: Element located by: By.xpath: //input[@name='username']. Exception: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6cb0ab9ed790bd692ef715c5c426a453, findElement {value=//input[@name='username'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 25444, ms:edgeOptions: {debuggerAddress: localhost:51691}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51691/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6cb0ab9ed790bd692ef715c5c426a453
+2026-02-17 20:52:53 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 27.844
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [4a9e36879a4466d61d62770105ee1594, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 36020, ms:edgeOptions: {debuggerAddress: localhost:63468}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63468/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a9e36879a4466d61d62770105ee1594
+2026-02-17 21:16:40 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Element not visible: Element located by: By.xpath: //input[@name='username']. Exception: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [9d09282ede84536e28ac92944ccc2c8a, findElement {value=//input[@name='username'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 22876, ms:edgeOptions: {debuggerAddress: localhost:59095}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59095/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9d09282ede84536e28ac92944ccc2c8a
+2026-02-17 21:18:58 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 19.966
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [22ee992939e08cbb44e3e67895e94a14, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 24488, ms:edgeOptions: {debuggerAddress: localhost:63063}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63063/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 22ee992939e08cbb44e3e67895e94a14
+2026-02-17 21:19:11 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Element not visible: Element located by: By.xpath: //input[@name='username']. Exception: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [ac0a9ebefd7133e35faf35a3455b9aa9, findElement {value=//input[@name='username'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 23476, ms:edgeOptions: {debuggerAddress: localhost:63064}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63064/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ac0a9ebefd7133e35faf35a3455b9aa9
+2026-02-17 21:19:14 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 12.124
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [4f85d1a7d035851f26fbd51d44fb0b90, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 14884, ms:edgeOptions: {debuggerAddress: localhost:63066}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63066/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f85d1a7d035851f26fbd51d44fb0b90
+2026-02-17 21:19:58 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 25.309
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [4f117f278893ecf77f435b51aa778d03, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 32128, ms:edgeOptions: {debuggerAddress: localhost:59119}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59119/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f117f278893ecf77f435b51aa778d03
+2026-02-18 22:57:19 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 26.708
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [033b0b71242f2a785ed0a8787c575cba, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 8552, ms:edgeOptions: {debuggerAddress: localhost:50148}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50148/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 033b0b71242f2a785ed0a8787c575cba
+2026-02-18 22:57:19 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 23.341
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c2a2a2bdac81629bc6267747e0e8f2d6, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 21356, ms:edgeOptions: {debuggerAddress: localhost:50149}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50149/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2a2a2bdac81629bc6267747e0e8f2d6
+2026-02-18 22:57:20 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 27.666
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [a1edc3f92cec5d6ea0ce73db9971dbb8, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 4592, ms:edgeOptions: {debuggerAddress: localhost:62444}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62444/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1edc3f92cec5d6ea0ce73db9971dbb8
+2026-02-18 22:58:36 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Element not visible: Element located by: By.xpath: //input[@name='username']. Exception: timeout: Timed out receiving message from renderer: 30.000
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [0bb00900fbf4f448317ba0f838b15907, findElement {using=xpath, value=//input[@name='username']}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 34232, ms:edgeOptions: {debuggerAddress: localhost:57271}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57271/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0bb00900fbf4f448317ba0f838b15907
+2026-02-18 22:58:48 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Test Failed: invalidLoginTest
+2026-02-18 23:22:31 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 25.839
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [1a2caa06fb9ac773b0efdb86261bcfef, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 25828, ms:edgeOptions: {debuggerAddress: localhost:51401}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51401/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a2caa06fb9ac773b0efdb86261bcfef
+2026-02-18 23:22:40 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 22.746
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [60db7d4a407a6c6732fca77f89c278d5, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 24760, ms:edgeOptions: {debuggerAddress: localhost:65250}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65250/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 60db7d4a407a6c6732fca77f89c278d5
+2026-02-18 23:22:40 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Test Failed: dummytest2
+2026-02-18 23:22:45 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Test Failed: dummyTest
+2026-02-19 00:45:28 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 27.517
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5d41285314a239d9ad46c8abd99115d5, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 32108, ms:edgeOptions: {debuggerAddress: localhost:64027}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64027/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5d41285314a239d9ad46c8abd99115d5
+2026-02-19 00:45:29 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 27.082
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [7216b39b96afb9073cf9b2a4b0ff6d30, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 32024, ms:edgeOptions: {debuggerAddress: localhost:64028}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64028/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7216b39b96afb9073cf9b2a4b0ff6d30
+2026-02-19 00:45:29 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 27.195
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [01a5ce878b5bcbf29c6cb13c0af79c42, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 13352, ms:edgeOptions: {debuggerAddress: localhost:64030}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64030/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 01a5ce878b5bcbf29c6cb13c0af79c42
+2026-02-19 00:45:30 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: 27.605
+  (Session info: MicrosoftEdge=144.0.3719.104)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b875215d5a15369595133753b1b3f9e0, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 27760, ms:edgeOptions: {debuggerAddress: localhost:64029}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64029/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b875215d5a15369595133753b1b3f9e0
+2026-02-19 01:08:30 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-19 01:08:48 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-19 01:08:48 [TestNG-test-OrangeHRMTest-4] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]
+2026-02-19 01:26:09 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-19 01:26:36 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-19 01:26:37 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]
+2026-02-19 01:31:41 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-19 01:32:20 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-19 01:32:21 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]
+2026-02-19 01:45:37 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-19 01:46:28 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 27220, ms:edgeOptions: {debuggerAddress: localhost:51395}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51395/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 51a282b58430f75a14070725ea4461b2
+2026-02-19 01:46:43 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 27220, ms:edgeOptions: {debuggerAddress: localhost:51395}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51395/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 51a282b58430f75a14070725ea4461b2
+2026-02-19 01:46:46 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-19 01:46:46 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]
+2026-02-19 01:48:19 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 39252, ms:edgeOptions: {debuggerAddress: localhost:58252}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58252/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d42b1ac5a3a3239999f010d14e170c13
+2026-02-19 01:48:30 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 39252, ms:edgeOptions: {debuggerAddress: localhost:58252}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58252/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d42b1ac5a3a3239999f010d14e170c13
+2026-02-19 01:48:30 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: verifyAddAndSearchEmployee | Error: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 39252, ms:edgeOptions: {debuggerAddress: localhost:58252}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58252/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d42b1ac5a3a3239999f010d14e170c13
+2026-02-19 01:49:36 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 24184, ms:edgeOptions: {debuggerAddress: localhost:51081}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51081/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 37a6889b1ebf1335eee789389237fc2a
+2026-02-19 01:49:46 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 24184, ms:edgeOptions: {debuggerAddress: localhost:51081}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51081/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 37a6889b1ebf1335eee789389237fc2a
+2026-02-19 01:50:46 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 15876, ms:edgeOptions: {debuggerAddress: localhost:56758}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56758/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fd669f5f7a6494d57dc3a9b0b9236234
+2026-02-19 01:50:57 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 15876, ms:edgeOptions: {debuggerAddress: localhost:56758}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56758/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fd669f5f7a6494d57dc3a9b0b9236234
+2026-02-19 01:50:57 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: verifyAddAndSearchEmployee | Error: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 15876, ms:edgeOptions: {debuggerAddress: localhost:56758}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56758/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fd669f5f7a6494d57dc3a9b0b9236234
+2026-02-19 01:52:01 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 38344, ms:edgeOptions: {debuggerAddress: localhost:58283}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58283/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9333d5f2816176905e28ab3a56e4019d
+2026-02-19 01:52:12 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 38344, ms:edgeOptions: {debuggerAddress: localhost:58283}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58283/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9333d5f2816176905e28ab3a56e4019d
+2026-02-19 01:53:28 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 41736, ms:edgeOptions: {debuggerAddress: localhost:57089}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57089/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 93f6ae1f3de84c51013daf56ce45c9e0
+2026-02-19 01:53:42 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 41736, ms:edgeOptions: {debuggerAddress: localhost:57089}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57089/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 93f6ae1f3de84c51013daf56ce45c9e0
+2026-02-19 01:53:42 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: verifyAddAndSearchEmployee | Error: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 144.0.3719.104, fedcm:accounts: true, goog:processID: 41736, ms:edgeOptions: {debuggerAddress: localhost:57089}, msedge: {msedgedriverVersion: 144.0.3719.130 (897347d4ca3..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57089/devtoo..., se:cdpVersion: 144.0.3719.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 93f6ae1f3de84c51013daf56ce45c9e0
+2026-02-22 10:42:11 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-22 10:42:38 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-22 10:42:39 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]
+2026-02-22 10:42:50 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 17284, ms:edgeOptions: {debuggerAddress: localhost:59475}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59475/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d6dc6f332faf7f393b2728a68b92e7d1
+2026-02-22 10:43:02 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 17284, ms:edgeOptions: {debuggerAddress: localhost:59475}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59475/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d6dc6f332faf7f393b2728a68b92e7d1
+2026-02-22 10:44:25 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 31068, ms:edgeOptions: {debuggerAddress: localhost:57190}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57190/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07a8b26f7b54cb7de482659856c7194b
+2026-02-22 10:44:35 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 31068, ms:edgeOptions: {debuggerAddress: localhost:57190}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57190/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07a8b26f7b54cb7de482659856c7194b
+2026-02-22 10:44:35 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: verifyAddAndSearchEmployee | Error: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 31068, ms:edgeOptions: {debuggerAddress: localhost:57190}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57190/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 07a8b26f7b54cb7de482659856c7194b
+2026-02-22 10:45:29 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 14712, ms:edgeOptions: {debuggerAddress: localhost:51851}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51851/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 991d35d1446753413e6b3249777892c0
+2026-02-22 10:45:40 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 14712, ms:edgeOptions: {debuggerAddress: localhost:51851}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51851/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 991d35d1446753413e6b3249777892c0
+2026-02-22 10:46:49 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 29444, ms:edgeOptions: {debuggerAddress: localhost:56503}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56503/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e0afb7b48cd900156bfb85ae065f79c7
+2026-02-22 10:47:00 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 29444, ms:edgeOptions: {debuggerAddress: localhost:56503}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56503/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e0afb7b48cd900156bfb85ae065f79c7
+2026-02-22 10:47:00 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: verifyAddAndSearchEmployee | Error: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 29444, ms:edgeOptions: {debuggerAddress: localhost:56503}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56503/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e0afb7b48cd900156bfb85ae065f79c7
+2026-02-22 10:47:55 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 29980, ms:edgeOptions: {debuggerAddress: localhost:57742}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57742/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c85a867fd46ca919c1dd303fdf8269e
+2026-02-22 10:48:05 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 29980, ms:edgeOptions: {debuggerAddress: localhost:57742}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57742/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c85a867fd46ca919c1dd303fdf8269e
+2026-02-22 10:48:57 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 6516, ms:edgeOptions: {debuggerAddress: localhost:58162}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58162/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05374c5eb2a7d29e1df3bad030588b46
+2026-02-22 10:49:08 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //span[text()='Admin']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 6516, ms:edgeOptions: {debuggerAddress: localhost:58162}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58162/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05374c5eb2a7d29e1df3bad030588b46
+2026-02-22 10:49:08 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: verifyAddAndSearchEmployee | Error: Expected condition failed: waiting for element found by By.xpath: //span[text()='Admin'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='Admin']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 6516, ms:edgeOptions: {debuggerAddress: localhost:58162}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58162/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05374c5eb2a7d29e1df3bad030588b46
+2026-02-22 10:59:13 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-22 10:59:35 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-22 10:59:35 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]
+2026-02-22 11:00:07 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 15900, ms:edgeOptions: {debuggerAddress: localhost:57381}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57381/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fffc34ecb296a3ceb3ad8e94e86c213b
+2026-02-22 11:00:18 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 15900, ms:edgeOptions: {debuggerAddress: localhost:57381}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57381/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fffc34ecb296a3ceb3ad8e94e86c213b
+2026-02-22 11:01:21 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 27604, ms:edgeOptions: {debuggerAddress: localhost:49687}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49687/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b1239a02f4bdbce8c0a79db98bf066eb
+2026-02-22 11:01:32 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 27604, ms:edgeOptions: {debuggerAddress: localhost:49687}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49687/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b1239a02f4bdbce8c0a79db98bf066eb
+2026-02-22 11:01:32 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: verifyAddAndSearchEmployee | Error: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 27604, ms:edgeOptions: {debuggerAddress: localhost:49687}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49687/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b1239a02f4bdbce8c0a79db98bf066eb
+2026-02-22 11:02:35 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 28888, ms:edgeOptions: {debuggerAddress: localhost:65193}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65193/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 155fe3d8100897a29d3994d37b427d23
+2026-02-22 11:02:45 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 28888, ms:edgeOptions: {debuggerAddress: localhost:65193}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65193/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 155fe3d8100897a29d3994d37b427d23
+2026-02-22 11:03:50 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 24188, ms:edgeOptions: {debuggerAddress: localhost:56311}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56311/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 428edda05b2770394c4a1a6cb7c8ed93
+2026-02-22 11:04:00 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 24188, ms:edgeOptions: {debuggerAddress: localhost:56311}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56311/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 428edda05b2770394c4a1a6cb7c8ed93
+2026-02-22 11:04:00 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: verifyAddAndSearchEmployee | Error: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 24188, ms:edgeOptions: {debuggerAddress: localhost:56311}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56311/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 428edda05b2770394c4a1a6cb7c8ed93
+2026-02-22 11:05:07 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 14976, ms:edgeOptions: {debuggerAddress: localhost:51039}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51039/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9452877b5289a4053e6b5f2f0b21aad9
+2026-02-22 11:05:17 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 14976, ms:edgeOptions: {debuggerAddress: localhost:51039}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51039/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9452877b5289a4053e6b5f2f0b21aad9
+2026-02-22 11:06:18 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 11996, ms:edgeOptions: {debuggerAddress: localhost:65516}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65516/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2aec6905f53286da3c8c8c390ccc362
+2026-02-22 11:06:28 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Click action failed on Element located by: By.xpath: //a[text()='Add Employee']. Exception: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 11996, ms:edgeOptions: {debuggerAddress: localhost:65516}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65516/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2aec6905f53286da3c8c8c390ccc362
+2026-02-22 11:06:28 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: verifyAddAndSearchEmployee | Error: Expected condition failed: waiting for element found by By.xpath: //a[text()='Add Employee'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Add Employee']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 11996, ms:edgeOptions: {debuggerAddress: localhost:65516}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65516/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2aec6905f53286da3c8c8c390ccc362
+2026-02-22 11:22:24 [main] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //button[contains(normalize-space(.),'Add')]]. Exception: invalid selector: Unable to locate an element with the xpath expression //button[contains(normalize-space(.),'Add')]] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[contains(normalize-space(.),'Add')]]' is not a valid XPath expression.
+  (Session info: MicrosoftEdge=145.0.3800.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [774ad285bac046661e444f4704118b94, findElement {using=xpath, value=//button[contains(normalize-space(.),'Add')]]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 20288, ms:edgeOptions: {debuggerAddress: localhost:53749}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53749/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 774ad285bac046661e444f4704118b94
+2026-02-22 11:22:24 [main] ERROR BaseClass - Click action failed on Element located by: By.xpath: //button[contains(normalize-space(.),'Add')]]. Exception: invalid selector: Unable to locate an element with the xpath expression //button[contains(normalize-space(.),'Add')]] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[contains(normalize-space(.),'Add')]]' is not a valid XPath expression.
+  (Session info: MicrosoftEdge=145.0.3800.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [774ad285bac046661e444f4704118b94, findElement {using=xpath, value=//button[contains(normalize-space(.),'Add')]]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 20288, ms:edgeOptions: {debuggerAddress: localhost:53749}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53749/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 774ad285bac046661e444f4704118b94
+2026-02-22 11:22:51 [main] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //button[contains(normalize-space(.),'Add')]]. Exception: invalid selector: Unable to locate an element with the xpath expression //button[contains(normalize-space(.),'Add')]] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[contains(normalize-space(.),'Add')]]' is not a valid XPath expression.
+  (Session info: MicrosoftEdge=145.0.3800.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5677fa30986eca150b157b95ce4ce5ab, findElement {using=xpath, value=//button[contains(normalize-space(.),'Add')]]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 31876, ms:edgeOptions: {debuggerAddress: localhost:58478}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58478/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5677fa30986eca150b157b95ce4ce5ab
+2026-02-22 11:22:51 [main] ERROR BaseClass - Click action failed on Element located by: By.xpath: //button[contains(normalize-space(.),'Add')]]. Exception: invalid selector: Unable to locate an element with the xpath expression //button[contains(normalize-space(.),'Add')]] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[contains(normalize-space(.),'Add')]]' is not a valid XPath expression.
+  (Session info: MicrosoftEdge=145.0.3800.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5677fa30986eca150b157b95ce4ce5ab, findElement {using=xpath, value=//button[contains(normalize-space(.),'Add')]]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 31876, ms:edgeOptions: {debuggerAddress: localhost:58478}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58478/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5677fa30986eca150b157b95ce4ce5ab
+2026-02-22 11:23:18 [main] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //button[contains(normalize-space(.),'Add')]]. Exception: invalid selector: Unable to locate an element with the xpath expression //button[contains(normalize-space(.),'Add')]] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[contains(normalize-space(.),'Add')]]' is not a valid XPath expression.
+  (Session info: MicrosoftEdge=145.0.3800.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [98f71235141ccec29c80f935eb5699ac, findElement {using=xpath, value=//button[contains(normalize-space(.),'Add')]]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 34660, ms:edgeOptions: {debuggerAddress: localhost:60980}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60980/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 98f71235141ccec29c80f935eb5699ac
+2026-02-22 11:23:18 [main] ERROR BaseClass - Click action failed on Element located by: By.xpath: //button[contains(normalize-space(.),'Add')]]. Exception: invalid selector: Unable to locate an element with the xpath expression //button[contains(normalize-space(.),'Add')]] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//button[contains(normalize-space(.),'Add')]]' is not a valid XPath expression.
+  (Session info: MicrosoftEdge=145.0.3800.65)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [98f71235141ccec29c80f935eb5699ac, findElement {using=xpath, value=//button[contains(normalize-space(.),'Add')]]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 34660, ms:edgeOptions: {debuggerAddress: localhost:60980}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60980/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 98f71235141ccec29c80f935eb5699ac
+2026-02-22 11:25:40 [main] ERROR BaseClass - Element not visible: Element located by: By.name: firstName. Exception: Expected condition failed: waiting for visibility of element found by By.name: firstName, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='firstName']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 2352, ms:edgeOptions: {debuggerAddress: localhost:50877}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50877/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a9b7ffd4d8a8ec7f11f68be4703a26e9
+2026-02-22 11:27:05 [main] ERROR BaseClass - Element not visible: Element located by: By.name: firstName. Exception: Expected condition failed: waiting for visibility of element found by By.name: firstName, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='firstName']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 34832, ms:edgeOptions: {debuggerAddress: localhost:55116}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55116/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eec253ee14af10d120e96efb4d132498
+2026-02-22 11:27:16 [main] ERROR BaseClass - Enter text action failed on Element located by: By.name: firstName. Exception: Expected condition failed: waiting for visibility of element found by By.name: firstName, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='firstName']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 34832, ms:edgeOptions: {debuggerAddress: localhost:55116}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55116/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eec253ee14af10d120e96efb4d132498
+2026-02-22 11:27:48 [main] ERROR BaseClass - Element not visible: Element located by: By.name: lastName. Exception: Expected condition failed: waiting for visibility of element found by By.name: lastName, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='lastName']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 34832, ms:edgeOptions: {debuggerAddress: localhost:55116}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55116/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eec253ee14af10d120e96efb4d132498
+2026-02-22 11:28:00 [main] ERROR BaseClass - Enter text action failed on Element located by: By.name: lastName. Exception: Expected condition failed: waiting for visibility of element found by By.name: lastName, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='lastName']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 34832, ms:edgeOptions: {debuggerAddress: localhost:55116}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55116/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eec253ee14af10d120e96efb4d132498
+2026-02-22 11:28:41 [main] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //label[text()='Employee Id']/parent::div/following-sibling::div/input. Exception: Expected condition failed: waiting for element found by By.xpath: //label[text()='Employee Id']/parent::div/following-sibling::div/input to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Employee Id']/parent::div/following-sibling::div/input"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 34832, ms:edgeOptions: {debuggerAddress: localhost:55116}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55116/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eec253ee14af10d120e96efb4d132498
+2026-02-22 11:28:52 [main] ERROR BaseClass - Click action failed on Element located by: By.xpath: //label[text()='Employee Id']/parent::div/following-sibling::div/input. Exception: Expected condition failed: waiting for element found by By.xpath: //label[text()='Employee Id']/parent::div/following-sibling::div/input to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//label[text()='Employee Id']/parent::div/following-sibling::div/input"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 34832, ms:edgeOptions: {debuggerAddress: localhost:55116}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55116/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eec253ee14af10d120e96efb4d132498
+2026-02-22 11:29:49 [main] ERROR BaseClass - Element not visible: Element located by: By.name: firstName. Exception: Expected condition failed: waiting for visibility of element found by By.name: firstName, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='firstName']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 26104, ms:edgeOptions: {debuggerAddress: localhost:63232}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63232/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1084444667c88e2ef5de656a653fc06
+2026-02-22 11:29:59 [main] ERROR BaseClass - Enter text action failed on Element located by: By.name: firstName. Exception: Expected condition failed: waiting for visibility of element found by By.name: firstName, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='firstName']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 26104, ms:edgeOptions: {debuggerAddress: localhost:63232}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63232/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1084444667c88e2ef5de656a653fc06
+2026-02-22 11:30:30 [main] ERROR BaseClass - Element not visible: Element located by: By.name: lastName. Exception: Expected condition failed: waiting for visibility of element found by By.name: lastName, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='lastName']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 26104, ms:edgeOptions: {debuggerAddress: localhost:63232}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63232/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1084444667c88e2ef5de656a653fc06
+2026-02-22 11:30:41 [main] ERROR BaseClass - Enter text action failed on Element located by: By.name: lastName. Exception: Expected condition failed: waiting for visibility of element found by By.name: lastName, but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='lastName']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 26104, ms:edgeOptions: {debuggerAddress: localhost:63232}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63232/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1084444667c88e2ef5de656a653fc06
+2026-02-22 11:31:13 [main] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //label[text()='Employee Id']/parent::div/following-sibling::div/input. Exception: Error communicating with the remote browser. It may have died.
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [a1084444667c88e2ef5de656a653fc06, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 26104, ms:edgeOptions: {debuggerAddress: localhost:63232}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63232/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a1084444667c88e2ef5de656a653fc06
+2026-02-22 16:25:52 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-22 16:26:00 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-22 16:26:00 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]
+2026-02-22 16:32:32 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-22 16:32:54 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-02-22 16:32:54 [TestNG-test-OrangeHRMTest-3] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]
+2026-02-22 21:03:43 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Test Failed: verifyEmployeeNameVerificationFromDB | Error: 
+[public void com.orangehrm.test.DBVerificationTest.verifyEmployeeNameVerificationFromDB(java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyEmployeeNameVerificationFromDB([java.lang.String arg0, java.lang.String arg1])
+Arguments: [(java.lang.String) hmahesh,(java.lang.String) Sanju@3124,(java.lang.String) MANGESH,(java.lang.String) SADANAND,(java.lang.String) YADAV,(java.lang.String) 0001]
+2026-02-26 05:15:31 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Test Failed: verifyEmployeeNameVerificationFromDB | Error: 
+[public void com.orangehrm.test.DBVerificationTest.verifyEmployeeNameVerificationFromDB(java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyEmployeeNameVerificationFromDB([java.lang.String arg0, java.lang.String arg1])
+Arguments: [(java.lang.String) hmahesh,(java.lang.String) Sanju@3124,(java.lang.String) MANGESH,(java.lang.String) SADANAND,(java.lang.String) YADAV,(java.lang.String) 0001]
+2026-02-26 06:15:49 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Test Failed: verifyEmployeeNameVerificationFromDB | Error: 
+[public void com.orangehrm.test.DBVerificationTest.verifyEmployeeNameVerificationFromDB(java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyEmployeeNameVerificationFromDB([java.lang.String arg0, java.lang.String arg1])
+Arguments: [(java.lang.String) hmahesh,(java.lang.String) Sanju@3124,(java.lang.String) MANGESH,(java.lang.String) SADANAND,(java.lang.String) YADAV,(java.lang.String) 0001]
+2026-02-26 06:55:53 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Test Failed: verifyEmployeeNameVerificationFromDB | Error: 
+[public void com.orangehrm.test.DBVerificationTest.verifyEmployeeNameVerificationFromDB(java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: verifyEmployeeNameVerificationFromDB([java.lang.String arg0, java.lang.String arg1])
+Arguments: [(java.lang.String) 1,(java.lang.String) Hitendra,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ,(java.lang.String) ]
+2026-02-26 07:14:00 [main] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: -0.015
+  (Session info: MicrosoftEdge=145.0.3800.65)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [75ecb072b6ed17d48236a2fcff90bf9d, get {url=http://localhost/orangehrm/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.65, fedcm:accounts: true, goog:processID: 30040, ms:edgeOptions: {debuggerAddress: localhost:59266}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59266/devtoo..., se:cdpVersion: 145.0.3800.65, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 75ecb072b6ed17d48236a2fcff90bf9d
+2026-02-26 07:19:56 [main] ERROR BaseClass - Texts are not Matching:Admin not equals null null
+2026-02-26 07:19:56 [main] ERROR BaseClass - Unable to compare Texts:Cannot invoke "String.equals(Object)" because "expectedText" is null
+2026-02-26 07:20:31 [main] ERROR BaseClass - Texts are not Matching:Admin not equals null null
+2026-02-26 07:20:32 [main] ERROR BaseClass - Unable to compare Texts:Cannot invoke "String.equals(Object)" because "expectedText" is null
+2026-02-26 07:21:03 [main] ERROR BaseClass - Texts are not Matching:Admin not equals null null
+2026-02-26 07:21:03 [main] ERROR BaseClass - Unable to compare Texts:Cannot invoke "String.equals(Object)" because "expectedText" is null
+2026-02-26 07:28:24 [main] ERROR BaseClass - Texts are not Matching:Admin not equals null null
+2026-02-26 07:28:24 [main] ERROR BaseClass - Unable to compare Texts:Cannot invoke "String.equals(Object)" because "expectedText" is null
+2026-02-26 07:28:46 [main] ERROR BaseClass - Texts are not Matching:Admin not equals null null
+2026-02-26 07:28:47 [main] ERROR BaseClass - Unable to compare Texts:Cannot invoke "String.equals(Object)" because "expectedText" is null
+2026-02-26 07:29:46 [main] ERROR BaseClass - Texts are not Matching:Admin not equals null null
+2026-02-26 07:29:47 [main] ERROR BaseClass - Unable to compare Texts:Cannot invoke "String.equals(Object)" because "expectedText" is null
+2026-02-26 07:30:10 [main] ERROR BaseClass - Texts are not Matching:Admin not equals null null
+2026-02-26 07:30:10 [main] ERROR BaseClass - Unable to compare Texts:Cannot invoke "String.equals(Object)" because "expectedText" is null
+2026-02-26 22:16:10 [main] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: MicrosoftEdge=145.0.3800.70)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [53a5ec24bd440b5ffc8f9b6757471571, get {url=http://localhost/orangehrm/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.70, fedcm:accounts: true, goog:processID: 5972, ms:edgeOptions: {debuggerAddress: localhost:54556}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54556/devtoo..., se:cdpVersion: 145.0.3800.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 53a5ec24bd440b5ffc8f9b6757471571
+2026-02-26 22:18:37 [main] ERROR BaseClass - Element not clickable: Element located by: By.xpath: //span[text()='PIM']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='PIM'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='PIM']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.70, fedcm:accounts: true, goog:processID: 3404, ms:edgeOptions: {debuggerAddress: localhost:59077}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59077/devtoo..., se:cdpVersion: 145.0.3800.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ecb997e9d6c05a09e5b03c483e004b89
+2026-02-26 22:18:49 [main] ERROR BaseClass - Click action failed on Element located by: By.xpath: //span[text()='PIM']. Exception: Expected condition failed: waiting for element found by By.xpath: //span[text()='PIM'] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text()='PIM']"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.70, fedcm:accounts: true, goog:processID: 3404, ms:edgeOptions: {debuggerAddress: localhost:59077}, msedge: {msedgedriverVersion: 145.0.3800.70 (57ed5ba8de27..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59077/devtoo..., se:cdpVersion: 145.0.3800.70, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ecb997e9d6c05a09e5b03c483e004b89
+2026-03-03 06:19:33 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: -0.011
+  (Session info: MicrosoftEdge=145.0.3800.82)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [d7c6ea3b5b6236213c71a7229867ddf4, get {url=http://localhost/orangehrm/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.82, fedcm:accounts: true, goog:processID: 5624, ms:edgeOptions: {debuggerAddress: localhost:60741}, msedge: {msedgedriverVersion: 145.0.3800.82 (de59ede99663..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60741/devtoo..., se:cdpVersion: 145.0.3800.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d7c6ea3b5b6236213c71a7229867ddf4
+2026-03-03 07:37:22 [main] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: -0.010
+  (Session info: MicrosoftEdge=145.0.3800.82)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [d60808607493372d529839f0f738b21e, get {url=http://localhost/orangehrm/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.82, fedcm:accounts: true, goog:processID: 20540, ms:edgeOptions: {debuggerAddress: localhost:60246}, msedge: {msedgedriverVersion: 145.0.3800.82 (de59ede99663..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60246/devtoo..., se:cdpVersion: 145.0.3800.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d60808607493372d529839f0f738b21e
+2026-03-03 07:38:26 [main] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-03-03 08:02:20 [main] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-03-03 08:09:53 [main] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-03-03 08:11:17 [main] ERROR BaseClass - Element not visible: Element located by: By.xpath: //div[contains(@class,'oxd-toast--success')]. Exception: Expected condition failed: waiting for visibility of element found by By.xpath: //div[contains(@class,'oxd-toast--success')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'oxd-toast--success')]"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.82, fedcm:accounts: true, goog:processID: 32396, ms:edgeOptions: {debuggerAddress: localhost:52419}, msedge: {msedgedriverVersion: 145.0.3800.82 (de59ede99663..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52419/devtoo..., se:cdpVersion: 145.0.3800.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e11a59a8e3441053310ea0d0977f043
+2026-03-03 08:11:27 [main] ERROR BaseClass - Element is not displayed: Expected condition failed: waiting for visibility of element found by By.xpath: //div[contains(@class,'oxd-toast--success')], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'oxd-toast--success')]"}.
+(tried for 30 seconds with 500 milliseconds interval)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.82, fedcm:accounts: true, goog:processID: 32396, ms:edgeOptions: {debuggerAddress: localhost:52419}, msedge: {msedgedriverVersion: 145.0.3800.82 (de59ede99663..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52419/devtoo..., se:cdpVersion: 145.0.3800.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7e11a59a8e3441053310ea0d0977f043
+2026-03-03 08:25:22 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: -0.007
+  (Session info: MicrosoftEdge=145.0.3800.82)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [d6a5c8b1efb8efc891d2f4359ac44181, get {url=http://localhost/orangehrm/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.82, fedcm:accounts: true, goog:processID: 3336, ms:edgeOptions: {debuggerAddress: localhost:49839}, msedge: {msedgedriverVersion: 145.0.3800.82 (de59ede99663..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49839/devtoo..., se:cdpVersion: 145.0.3800.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d6a5c8b1efb8efc891d2f4359ac44181
+2026-03-03 08:27:58 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Texts are not Matching:Admin not equals Hitendra
+2026-03-03 08:27:59 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Texts are not Matching:lastname not equals Verma
+2026-03-03 08:28:24 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Test Failed: verifyEmployeeNameVerificationFromDB | Error: The following asserts failed:
+	First and Middle name are not Matching expected [true] but found [false],
+	expected [true] but found [false]
+2026-03-03 09:27:24 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Test Failed: verifyGetUserApi | Error: The following asserts failed:
+	Expected status code 201 but got 200 expected [true] but found [false]
+2026-03-03 09:35:59 [TestNG-test-OrangeHRMTest-2] ERROR BaseClass - Test Failed: verifyGetUserApi | Error: The following asserts failed:
+	Expected status code 201 but got 200 expected [true] but found [false]
+2026-03-03 15:42:11 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Critical error during browser configuration: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: MicrosoftEdge=145.0.3800.82)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [6ad961d8a6bf0f5e6db43fe92b7460c3, get {url=http://localhost/orangehrm/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.82, fedcm:accounts: true, goog:processID: 15948, ms:edgeOptions: {debuggerAddress: localhost:59492}, msedge: {msedgedriverVersion: 145.0.3800.82 (de59ede99663..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59492/devtoo..., se:cdpVersion: 145.0.3800.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6ad961d8a6bf0f5e6db43fe92b7460c3
+2026-03-03 15:43:18 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Critical error during browser configuration: timeout: Timed out receiving message from renderer: -0.014
+  (Session info: MicrosoftEdge=145.0.3800.82)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c4a2d73b6269e37800ca1748cfd3d5b4, get {url=http://localhost/orangehrm/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 145.0.3800.82, fedcm:accounts: true, goog:processID: 27704, ms:edgeOptions: {debuggerAddress: localhost:53741}, msedge: {msedgedriverVersion: 145.0.3800.82 (de59ede99663..., userDataDir: C:\Users\Mahesh\AppData\Loc...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53741/devtoo..., se:cdpVersion: 145.0.3800.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4a2d73b6269e37800ca1748cfd3d5b4
+2026-03-03 15:54:40 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-03-03 15:54:50 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-03-03 15:55:12 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-03-03 15:55:12 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]
+2026-03-03 15:55:35 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Texts are not Matching:Admin not equals Hitendra
+2026-03-03 15:55:36 [TestNG-test-OrangeHRMTest-1] ERROR BaseClass - Texts are not Matching:lastname not equals Verma
+2026-03-03 15:57:51 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-03-03 15:58:11 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-03-03 15:58:26 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Texts are not Matching:Invalid credentials not equals Invalid credentials1
+2026-03-03 15:58:26 [TestNG-test-OrangeHRMTest-5] ERROR BaseClass - Test Failed: invalidLoginTest | Error: Test Failed: The expected error message 'Invalid credentials1' was not displayed. expected [true] but found [false]

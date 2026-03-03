@@ -9,21 +9,56 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">OrangeHRMSuite</th></tr>
-<tr><td><a href="#t0">OrangeHRMTest</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">105,723</td><td></td><td></td></tr>
+<tr><td><a href="#t0">OrangeHRMTest</a></td><td class="num">5</td><td class="num attn">1</td><td class="num attn">3</td><td class="num attn">1</td><td class="num">94,955</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OrangeHRMSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">OrangeHRMTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.orangehrm.test.LoginPageTest</td><td><a href="#m0">invalidLoginTest</a></td><td rowspan="1">1770775524482</td><td rowspan="1">14680</td></tr><tr><th colspan="4">OrangeHRMTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.orangehrm.test.DummyClass</td><td><a href="#m1">dummyTest</a></td><td rowspan="1">1770775449525</td><td rowspan="1">79093</td></tr><tr class="passedodd"><td rowspan="1">com.orangehrm.test.DummyClass2</td><td><a href="#m2">test</a></td><td rowspan="1">1770775497338</td><td rowspan="1">72</td></tr><tr class="passedeven"><td rowspan="1">com.orangehrm.test.HomePageTest</td><td><a href="#m3">verifyOrangeHRMLogo</a></td><td rowspan="1">1770775446625</td><td rowspan="1">64319</td></tr><tr class="passedodd"><td rowspan="1">com.orangehrm.test.LoginPageTest</td><td><a href="#m4">verifyValidLoginTest</a></td><td rowspan="1">1770775448584</td><td rowspan="1">68158</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OrangeHRMSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">OrangeHRMTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.orangehrm.test.LoginPageTest</td><td><a href="#m0">invalidLoginTest</a></td><td rowspan="1">1772533497893</td><td rowspan="1">15073</td></tr><tr><th colspan="4">OrangeHRMTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.orangehrm.test.DummyClass</td><td><a href="#m1">dummyTest</a></td><td rowspan="1">1772533474699</td><td rowspan="1">210</td></tr><tr><th colspan="4">OrangeHRMTest &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">com.orangehrm.test.DBVerificationTest</td><td><a href="#m2">verifyEmployeeNameVerificationFromDB</a></td><td rowspan="1">1772533474806</td><td rowspan="1">62576</td></tr><tr class="retriedodd"><td rowspan="2">com.orangehrm.test.LoginPageTest</td><td><a href="#m3">invalidLoginTest</a></td><td rowspan="2">1772533485106</td><td rowspan="2">5845</td></tr><tr class="retriedodd"><td><a href="#m4">invalidLoginTest</a></td></tr><tr><th colspan="4">OrangeHRMTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.orangehrm.test.ApiTest</td><td><a href="#m5">verifyGetUserApi</a></td><td rowspan="1">1772533465722</td><td rowspan="1">6997</td></tr><tr class="passedodd"><td rowspan="1">com.orangehrm.test.DBVerificationTest</td><td><a href="#m6">verifyEmployeeNameVerificationFromDB</a></td><td rowspan="1">1772533544517</td><td rowspan="1">15129</td></tr><tr class="passedeven"><td rowspan="1">com.orangehrm.test.DummyClass2</td><td><a href="#m7">dummytest2</a></td><td rowspan="1">1772533473112</td><td rowspan="1">30</td></tr><tr class="passedodd"><td rowspan="1">com.orangehrm.test.HomePageTest</td><td><a href="#m8">verifyOrangeHRMLogo</a></td><td rowspan="1">1772533478833</td><td rowspan="1">20777</td></tr><tr class="passedeven"><td rowspan="1">com.orangehrm.test.LoginPageTest</td><td><a href="#m9">verifyValidLoginTest</a></td><td rowspan="1">1772533523103</td><td rowspan="1">21054</td></tr></tbody>
 </table>
-<h2>OrangeHRMTest</h2><h3 id="m0">com.orangehrm.test.LoginPageTest#invalidLoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
-	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:44)
+<h2>OrangeHRMTest</h2><h3 id="m0">com.orangehrm.test.LoginPageTest#invalidLoginTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin1</td><td>admin1234</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:50)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 ... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.orangehrm.test.DummyClass#dummyTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.orangehrm.test.DummyClass2#test</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.orangehrm.test.HomePageTest#verifyOrangeHRMLogo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.orangehrm.test.LoginPageTest#verifyValidLoginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.orangehrm.test.DummyClass#dummyTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.SkipException: Skipping the test as part of testing
+	at com.orangehrm.test.DummyClass.dummyTest(DummyClass.java:25)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.orangehrm.test.DBVerificationTest#verifyEmployeeNameVerificationFromDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>0001</td><td>Hitendra</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
+	First and Middle name are not Matching expected [true] but found [false],
+	expected [true] but found [false]
+	at com.orangehrm.test.DBVerificationTest.verifyEmployeeNameVerificationFromDB(DBVerificationTest.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 13 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.orangehrm.test.LoginPageTest#invalidLoginTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin1</td><td>admin1234</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:50)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.orangehrm.test.LoginPageTest#invalidLoginTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>admin1</td><td>admin1234</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:50)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.orangehrm.test.ApiTest#verifyGetUserApi</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.orangehrm.test.DBVerificationTest#verifyEmployeeNameVerificationFromDB</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>0001</td><td>Hitendra</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.orangehrm.test.DummyClass2#dummytest2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.orangehrm.test.HomePageTest#verifyOrangeHRMLogo</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>hmahesh</td><td>Sanju@3124</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.orangehrm.test.LoginPageTest#verifyValidLoginTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>hmahesh</td><td>Sanju@3124</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

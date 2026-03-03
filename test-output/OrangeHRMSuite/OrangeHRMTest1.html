@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>OrangeHRMTest1</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Nov 17 07:28:48 IST 2025</td>
+<td>Started on:</td><td>Wed Feb 11 08:00:03 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10162 ms)</td>
+<tr><td>Total time:</td><td>139 seconds (139792 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,53 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.orangehrm.test.LoginPageTest.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: com.orangehrm.test.LoginPageTest<br>Test method: Verify error message with invalid credentials</td>
+<td><div><pre>java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:44)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2067293618", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2067293618'><pre>java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:44)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>14</td>
+<td>com.orangehrm.test.LoginPageTest@3e7634b9</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,15 +123,25 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.orangehrm.test.HomePageTest.verifyOrangeHRMLogo()'><b>verifyOrangeHRMLogo</b><br>Test class: com.orangehrm.test.HomePageTest<br>Test method: Verify OrangeHRM Logo visibility on Home Page</td>
+<td></td>
+<td>11</td>
+<td>com.orangehrm.test.HomePageTest@6f0b0a5e</td></tr>
+<tr>
 <td title='com.orangehrm.test.DummyClass2.test()'><b>test</b><br>Test class: com.orangehrm.test.DummyClass2</td>
 <td></td>
 <td>0</td>
-<td>com.orangehrm.test.DummyClass2@2d2ffcb7</td></tr>
+<td>com.orangehrm.test.DummyClass2@3fa2213</td></tr>
+<tr>
+<td title='com.orangehrm.test.LoginPageTest.verifyValidLoginTest()'><b>verifyValidLoginTest</b><br>Test class: com.orangehrm.test.LoginPageTest<br>Test method: Verify user can login with valid credentials</td>
+<td></td>
+<td>13</td>
+<td>com.orangehrm.test.LoginPageTest@3e7634b9</td></tr>
 <tr>
 <td title='com.orangehrm.test.DummyClass.dummyTest()'><b>dummyTest</b><br>Test class: com.orangehrm.test.DummyClass</td>
 <td></td>
-<td>0</td>
-<td>com.orangehrm.test.DummyClass@291b4bf5</td></tr>
+<td>14</td>
+<td>com.orangehrm.test.DummyClass@4189d70b</td></tr>
 </table><p>
 </body>
 </html>

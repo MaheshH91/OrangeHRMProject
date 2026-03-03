@@ -43,23 +43,63 @@ ExtentReports/
 *.xml
 
 ##############################
-## Logs
+## Logs and Output files
 ##############################
 *.log
 logs/
 log/
-
+output/
+*.out
+*.err
 
 ##############################
-## Eclipse
+## Eclipse or IDE Files
 ##############################
 .classpath
 .project
 .settings/
 bin/
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+##############################
+## Ignore test reports and screenshots specific files
+##############################
+
+screenshots/
+test-reports/
+reports/
+screenshots/
+report/
+test-output/
 
 ##############################
 ## OS Files
 ##############################
 *.DS_Store
 Thumbs.db
+
+
+##############################
+## Maven specific files
+##############################
+.mvn/
+mvnw
+mvnw.cmd
+
+
+
+##############################
+## Ignore generated files
+##############################
+generated/
+gen/    
+

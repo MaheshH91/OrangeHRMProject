@@ -11,7 +11,7 @@ import io.restassured.response.Response;
 
 public class ApiTest {
 
-	@Test(description = "Verify GET User API", retryAnalyzer = RetryAnalyzer.class)
+	@Test(description = "Verify GET User API"/* , retryAnalyzer = RetryAnalyzer.class */)
 	public void verifyGetUserApi() {
 
 		SoftAssert softAssert = new SoftAssert();

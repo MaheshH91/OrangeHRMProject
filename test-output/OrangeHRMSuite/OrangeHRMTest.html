@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>OrangeHRMTest</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/4</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 11 07:33:54 IST 2026</td>
+<td>Started on:</td><td>Tue Mar 03 15:54:25 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>105 seconds (105723 ms)</td>
+<tr><td>Total time:</td><td>94 seconds (94955 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,134 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.orangehrm.test.LoginPageTest.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: com.orangehrm.test.LoginPageTest<br>Test method: Verify error message with invalid credentials</td>
+<td title='com.orangehrm.test.LoginPageTest.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: com.orangehrm.test.LoginPageTest<br>Test method: Verify error message with invalid credentials<br>Parameters: admin1, admin1234</td>
 <td><div><pre>java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
-	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:44)
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:50)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1242960616", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1242960616'><pre>java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1794805336", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1794805336'><pre>java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:44)
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>15</td>
+<td>com.orangehrm.test.LoginPageTest@73c60324</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.orangehrm.test.ApiTest.verifyGetUserApi()'><b>verifyGetUserApi</b><br>Test class: com.orangehrm.test.ApiTest<br>Test method: Verify GET User API</td>
+<td></td>
+<td>6</td>
+<td>com.orangehrm.test.ApiTest@7adf16aa</td></tr>
+<tr>
+<td title='com.orangehrm.test.DBVerificationTest.verifyEmployeeNameVerificationFromDB()'><b>verifyEmployeeNameVerificationFromDB</b><br>Test class: com.orangehrm.test.DBVerificationTest<br>Parameters: 0001, Hitendra</td>
+<td></td>
+<td>15</td>
+<td>com.orangehrm.test.DBVerificationTest@6c8bca63</td></tr>
+<tr>
+<td title='com.orangehrm.test.LoginPageTest.verifyValidLoginTest()'><b>verifyValidLoginTest</b><br>Test class: com.orangehrm.test.LoginPageTest<br>Test method: Verify user can login with valid credentials<br>Parameters: hmahesh, Sanju@3124</td>
+<td></td>
+<td>21</td>
+<td>com.orangehrm.test.LoginPageTest@73c60324</td></tr>
+<tr>
+<td title='com.orangehrm.test.DummyClass2.dummytest2()'><b>dummytest2</b><br>Test class: com.orangehrm.test.DummyClass2</td>
+<td></td>
+<td>0</td>
+<td>com.orangehrm.test.DummyClass2@58bf8650</td></tr>
+<tr>
+<td title='com.orangehrm.test.HomePageTest.verifyOrangeHRMLogo()'><b>verifyOrangeHRMLogo</b><br>Test class: com.orangehrm.test.HomePageTest<br>Test method: Verify OrangeHRM Logo visibility on Home Page<br>Parameters: hmahesh, Sanju@3124</td>
+<td></td>
+<td>20</td>
+<td>com.orangehrm.test.HomePageTest@71ae31b0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.orangehrm.test.LoginPageTest.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: com.orangehrm.test.LoginPageTest<br>Test method: Verify error message with invalid credentials<br>Parameters: admin1, admin1234</td>
+<td><div><pre>java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:50)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace287226413", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace287226413'><pre>java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>5</td>
+<td>com.orangehrm.test.LoginPageTest@73c60324</td></tr>
+<tr>
+<td title='com.orangehrm.test.DBVerificationTest.verifyEmployeeNameVerificationFromDB()'><b>verifyEmployeeNameVerificationFromDB</b><br>Test class: com.orangehrm.test.DBVerificationTest<br>Parameters: 0001, Hitendra</td>
+<td><div><pre>java.lang.AssertionError: The following asserts failed:
+	First and Middle name are not Matching expected [true] but found [false],
+	expected [true] but found [false]
+	at com.orangehrm.test.DBVerificationTest.verifyEmployeeNameVerificationFromDB(DBVerificationTest.java:68)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1995162450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1995162450'><pre>java.lang.AssertionError: The following asserts failed:
+	First and Middle name are not Matching expected [true] but found [false],
+	expected [true] but found [false]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at com.orangehrm.test.DBVerificationTest.verifyEmployeeNameVerificationFromDB(DBVerificationTest.java:68)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -107,37 +221,73 @@ function toggleAllBoxes() {
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
-<td>14</td>
-<td>com.orangehrm.test.LoginPageTest@3c989952</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td>62</td>
+<td>com.orangehrm.test.DBVerificationTest@6c8bca63</td></tr>
 <tr>
-<td title='com.orangehrm.test.DummyClass2.test()'><b>test</b><br>Test class: com.orangehrm.test.DummyClass2</td>
-<td></td>
-<td>0</td>
-<td>com.orangehrm.test.DummyClass2@3e14c16d</td></tr>
-<tr>
-<td title='com.orangehrm.test.HomePageTest.verifyOrangeHRMLogo()'><b>verifyOrangeHRMLogo</b><br>Test class: com.orangehrm.test.HomePageTest<br>Test method: Verify OrangeHRM Logo visibility on Home Page</td>
-<td></td>
-<td>64</td>
-<td>com.orangehrm.test.HomePageTest@1522d8a0</td></tr>
+<td title='com.orangehrm.test.LoginPageTest.invalidLoginTest()'><b>invalidLoginTest</b><br>Test class: com.orangehrm.test.LoginPageTest<br>Test method: Verify error message with invalid credentials<br>Parameters: admin1, admin1234</td>
+<td><div><pre>java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:50)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 14 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1662814641", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1662814641'><pre>java.lang.AssertionError: Test Failed: The expected error message &apos;Invalid credentials1&apos; was not displayed. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.orangehrm.test.LoginPageTest.invalidLoginTest(LoginPageTest.java:50)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>7</td>
+<td>com.orangehrm.test.LoginPageTest@73c60324</td></tr>
 <tr>
 <td title='com.orangehrm.test.DummyClass.dummyTest()'><b>dummyTest</b><br>Test class: com.orangehrm.test.DummyClass</td>
-<td></td>
-<td>79</td>
-<td>com.orangehrm.test.DummyClass@3f07b12c</td></tr>
-<tr>
-<td title='com.orangehrm.test.LoginPageTest.verifyValidLoginTest()'><b>verifyValidLoginTest</b><br>Test class: com.orangehrm.test.LoginPageTest<br>Test method: Verify user can login with valid credentials</td>
-<td></td>
-<td>68</td>
-<td>com.orangehrm.test.LoginPageTest@3c989952</td></tr>
+<td><div><pre>org.testng.SkipException: Skipping the test as part of testing
+	at com.orangehrm.test.DummyClass.dummyTest(DummyClass.java:25)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 11 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2019995704", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2019995704'><pre>org.testng.SkipException: Skipping the test as part of testing
+	at com.orangehrm.test.DummyClass.dummyTest(DummyClass.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>0</td>
+<td>com.orangehrm.test.DummyClass@34a1d21f</td></tr>
 </table><p>
 </body>
 </html>
